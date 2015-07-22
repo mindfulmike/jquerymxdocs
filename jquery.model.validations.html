@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX - Validations </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jQuery.Model.html" data-search="jQuery.Model">
+				jQuery.Model
+			</a>
+		</li>
+		
+		
+			<li class="search-container active">
+			<a class="sidebar-title" href="jquery.model.validations.html" data-search="Validations">
+				Validations
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validate.html" data-search="jQuery.Model.static.validate">
+						static.validate
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validateFormatOf.html" data-search="jQuery.Model.static.validateFormatOf">
+						static.validateFormatOf
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validateInclusionOf.html" data-search="jQuery.Model.static.validateInclusionOf">
+						static.validateInclusionOf
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validateLengthOf.html" data-search="jQuery.Model.static.validateLengthOf">
+						static.validateLengthOf
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validatePresenceOf.html" data-search="jQuery.Model.static.validatePresenceOf">
+						static.validatePresenceOf
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Model.static.validateRangeOf.html" data-search="jQuery.Model.static.validateRangeOf">
+						static.validateRangeOf
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="validationMessages.html" data-search="validationMessages">
+						validationMessages
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+		</li>
+		
+	
+</ul>
+
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Validations</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	<span class="module">jquery/model/validations</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+		<li><a href="../jquerymx/http:/jmvcsite.heroku.com/pluginify?plugins[]=jquery/model/validations/validations.js">download</a></li>
+	
+	
+		<li><a href="../jquery/model/validations/qunit.html">tests</a></li>
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>In many apps, it's important to validate data before sending it to the server.
+The jquery/model/validations plugin provides validations on models.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h2>Example</h2>
+<p>To use validations, you need to call a validate method on the Model class.
+The best place to do this is in a Class's init function.</p>
+<h2>Demo</h2>
+<p>Click a person's name to update their birthday.  If you put the date
+in the future, say the year 2525, it will report back an error.</p>
+<div class='demo_wrapper' data-demo-src='jquery/model/validations/validations.html'></div>
+
+		</section>
+		
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"src":"model/validations/validations.js","line":1,"codeLine":37,"type":"page","description":"In many apps, it's important to validate data before sending it to the server. \nThe jquery/model/validations plugin provides validations on models.","name":"jquery.model.validations","title":"Validations","plugin":"jquery/model/validations","download":"http://jmvcsite.heroku.com/pluginify?plugins[]=jquery/model/validations/validations.js","test":"jquery/model/validations/qunit.html","parent":"jQuery.Model","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

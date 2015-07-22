@@ -66,18 +66,15 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		<li class="search-container active parent">
 			<a class="sidebar-title" href="specialevents.html" data-search="Special Events">
 				Special Events
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="jQuery.Drop.html" data-search="jQuery.Drop">
 				jQuery.Drop
@@ -133,11 +130,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -265,38 +263,24 @@ events:
 </ul>
 <h2>Examples</h2>
 Here's how to listen for when a drag moves over a drop:
-<pre><code class="language-js">$('.drop').delegate(&quot;dropover&quot;, function(ev, drop, drag){
-  $(this).addClass(&quot;drop-over&quot;)
-})
-```A bit more complex example:
-&lt;div class='demo_wrapper' data-demo-src='jquery/event/drop/drop.html' data-demo-height='1000'&gt;&lt;/div&gt;
-
-
-
-## How it works
-
-  1. When you bind on a drop event, it adds that element to the list of rootElements.
-     RootElements might be drop points, or might have delegated drop points in them.
-
-  2. When a drag motion is started, each rootElement is queried for the events listening on it.
-     These events might be delegated events so we need to query for the drop elements.
-  
-  3. With each drop element, we add a Drop object with all the callbacks for that element.
-     Each element might have multiple event provided by different rootElements.  We merge
-     callbacks into the Drop object if there is an existing Drop object.
-     
-  4. Once Drop objects have been added to all elements, we go through them and call draginit
-     if available.
-     
-
-The constructor is never called directly.
- 
-</code></pre>
+A bit more complex example:
+<div class='demo_wrapper' data-demo-src='jquery/event/drop/drop.html' data-demo-height='1000'></div>
+<h2>How it works</h2>
+<ol>
+<li><p>When you bind on a drop event, it adds that element to the list of rootElements.
+RootElements might be drop points, or might have delegated drop points in them.</p></li>
+<li><p>When a drag motion is started, each rootElement is queried for the events listening on it.
+These events might be delegated events so we need to query for the drop elements.</p></li>
+<li><p>With each drop element, we add a Drop object with all the callbacks for that element.
+Each element might have multiple event provided by different rootElements.  We merge
+callbacks into the Drop object if there is an existing Drop object.</p></li>
+<li><p>Once Drop objects have been added to all elements, we go through them and call draginit
+if available.</p></li>
+</ol>
+<p>The constructor is never called directly.</p>
 
 		</section>
 		
-		
-
 		
 
 		

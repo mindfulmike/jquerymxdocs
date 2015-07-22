@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>index  - $.Class</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">index</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="index">
+				index
+			</a>
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jquerymx.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+		</li>
+		
+		
+			<li class="search-container active">
+			<a class="sidebar-title" href="$.Class.html" data-search="$.Class">
+				$.Class
+			</a>
+			
+	<ul>
+		
+			
+				
+					
+					<li class="heading search-container">
+						<span>prototype</span>
+						
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="proxy.html" data-search="proxy">
+						proxy
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+					</li>
+					
+				
+				
+			
+			
+		
+			
+				
+					
+					<li class="heading search-container">
+						<span>static</span>
+						
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="$.Class.static.extend.html" data-search="$.Class.static.extend">
+						extend
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="$.Class.static.fullName.html" data-search="$.Class.static.fullName">
+						fullName
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="$.Class.static.namespace.html" data-search="$.Class.static.namespace">
+						namespace
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="$.Class.static.setup.html" data-search="$.Class.static.setup">
+						setup
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="$.Class.static.shortName.html" data-search="$.Class.static.shortName">
+						shortName
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="newInstance.html" data-search="newInstance">
+						newInstance
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+					</li>
+					
+				
+				
+			
+			
+		
+	</ul>
+
+
+		</li>
+		
+	
+</ul>
+
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>$.Class</h1>
+	<ul class="tags">
+		<li>constructor</li>
+	</ul>
+	<span class="module">jquery/class</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+    
+	
+		<li><a href="">source</a></li>
+	
+	
+		<li><a href="../jquerymx/dist/jquery/jquery.class.js">download</a></li>
+	
+	
+		<li><a href="../jquery/class/qunit.html">tests</a></li>
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Easy inheritance in JavaScript.
+Class provides simulated inheritance in JavaScript. Use Class to bridge the gap between
+jQuery's functional programming style and Object Oriented Programming. It
+is based off John Resig's <a href="http://ejohn.org/blog/simple-javascript-inheritance/|Simple">Class</a>
+Inheritance library.  Besides prototypal inheritance, it includes a few important features:</p>
+<ul>
+<li>Static inheritance</li>
+<li>Introspection</li>
+<li>Namespaces</li>
+<li>Setup and initialization methods</li>
+<li>Easy callback function creation</li>
+</ul>
+<p>The [mvc.class Get Started with jQueryMX] has a good walkthrough of $.Class.</p>
+<h2>Static v. Prototype</h2>
+<p>Before learning about Class, it's important to
+understand the difference between
+a class's <strong>static</strong> and <strong>prototype</strong> properties.</p>
+<pre><code>//STATIC
+MyClass.staticProperty  //shared property
+
+//PROTOTYPE
+myclass = new MyClass()
+myclass.prototypeMethod() //instance method
+</code></pre>
+<p>A static (or class) property is on the Class constructor
+function itself
+and can be thought of being shared by all instances of the
+Class. Prototype propertes are available only on instances of the Class.</p>
+<h2>A Basic Class</h2>
+<p>The following creates a Monster class with a
+name (for introspection), static, and prototype members.
+Every time a monster instance is created, the static
+count is incremented.</p>
+<pre><code class="language-js">$.Class('Monster',
+/* @static *|
+{
+  count: 0
+},
+/* @prototype *|
+{
+  init: function( name ) {
+
+    // saves name on the monster instance
+    this.name = name;
+
+    // sets the health
+    this.health = 10;
+
+    // increments count
+    this.constructor.count++;
+  },
+  eat: function( smallChildren ){
+    this.health += smallChildren;
+  },
+  fight: function() {
+    this.health -= 2;
+  }
+});
+
+hydra = new Monster('hydra');
+
+dragon = new Monster('dragon');
+
+hydra.name        // -&gt; hydra
+Monster.count     // -&gt; 2
+Monster.shortName // -&gt; 'Monster'
+
+hydra.eat(2);     // health = 12
+
+dragon.fight();   // health = 8
+
+</code></pre>
+<p>Notice that the prototype <b>init</b> function is called when a new instance of Monster is created.</p>
+<h2>Inheritance</h2>
+<p>When a class is extended, all static and prototype properties are available on the new class.
+If you overwrite a function, you can call the base class's function by calling
+<code>this._super</code>.  Lets create a SeaMonster class.  SeaMonsters are less
+efficient at eating small children, but more powerful fighters.</p>
+<pre><code>Monster(&quot;SeaMonster&quot;,{
+  eat: function( smallChildren ) {
+    this._super(smallChildren / 2);
+  },
+  fight: function() {
+    this.health -= 1;
+  }
+});
+
+lockNess = new SeaMonster('Lock Ness');
+lockNess.eat(4);   //health = 12
+lockNess.fight();  //health = 11
+</code></pre>
+<h3>Static property inheritance</h3>
+<p>You can also inherit static properties in the same way:</p>
+<pre><code>$.Class(&quot;First&quot;,
+{
+    staticMethod: function() { return 1;}
+},{})
+
+First(&quot;Second&quot;,{
+    staticMethod: function() { return this._super()+1;}
+},{})
+
+Second.staticMethod() // -&gt; 2
+</code></pre>
+<h2>Namespaces</h2>
+<p>Namespaces are a good idea! We encourage you to namespace all of your code.
+It makes it possible to drop your code into another app without problems.
+Making a namespaced class is easy:</p>
+<pre><code>$.Class(&quot;MyNamespace.MyClass&quot;,{},{});
+
+new MyNamespace.MyClass()
+</code></pre>
+<h2 id='introspection'>Introspection</h2>
+<p>Often, it's nice to create classes whose name helps determine functionality.  Ruby on
+Rails's <a href="http://api.rubyonrails.org/classes/ActiveRecord/Base.html|ActiveRecord">http://api.rubyonrails.org/classes/ActiveRecord/Base.html|ActiveRecord</a> ORM class
+is a great example of this.  Unfortunately, JavaScript doesn't have a way of determining
+an object's name, so the developer must provide a name.  Class fixes this by taking a String name for the class.</p>
+<pre><code>$.Class(&quot;MyOrg.MyClass&quot;,{},{})
+MyOrg.MyClass.shortName //-&gt; 'MyClass'
+MyOrg.MyClass.fullName //-&gt;  'MyOrg.MyClass'
+</code></pre>
+<p>The fullName (with namespaces) and the shortName (without namespaces) are added to the Class's
+static properties.</p>
+<h2>Setup and initialization methods</h2>
+<p>
+Class provides static and prototype initialization functions.
+These come in two flavors - setup and init.
+Setup is called before init and
+can be used to 'normalize' init's arguments.
+</p>
+<div class='whisper'>PRO TIP: Typically, you don't need setup methods in your classes. Use Init instead.
+Reserve setup methods for when you need to do complex pre-processing of your class before init is called.
+</div>
+<pre><code class="language-js">$.Class(&quot;MyClass&quot;,
+{
+  setup: function() {} //static setup
+  init: function() {} //static constructor
+},
+{
+  setup: function() {} //prototype setup
+  init: function() {} //prototype constructor
+})
+</code></pre>
+<h3>Setup</h3>
+<p>Setup functions are called before init functions.  Static setup functions are passed
+the base class followed by arguments passed to the extend function.
+Prototype static functions are passed the Class constructor
+function arguments.</p>
+<p>If a setup function returns an array, that array will be used as the arguments
+for the following init method.  This provides setup functions the ability to normalize
+arguments passed to the init constructors.  They are also excellent places
+to put setup code you want to almost always run.</p>
+<p>The following is similar to how [jQuery.Controller.prototype.setup]
+makes sure init is always called with a jQuery element and merged options
+even if it is passed a raw
+HTMLElement and no second parameter.</p>
+<pre><code>$.Class(&quot;jQuery.Controller&quot;,{
+  ...
+},{
+  setup: function( el, options ) {
+    ...
+    return [$(el),
+            $.extend(true,
+               this.Class.defaults,
+               options || {} ) ]
+  }
+})
+</code></pre>
+<p>Typically, you won't need to make or overwrite setup functions.</p>
+<h3>Init</h3>
+<p>Init functions are called after setup functions.
+Typically, they receive the same arguments
+as their preceding setup function.  The Foo class's <code>init</code> method
+gets called in the following example:</p>
+<pre><code>$.Class(&quot;Foo&quot;, {
+  init: function( arg1, arg2, arg3 ) {
+    this.sum = arg1+arg2+arg3;
+  }
+})
+var foo = new Foo(1,2,3);
+foo.sum //-&gt; 6
+</code></pre>
+<h2>Proxies</h2>
+<p>Similar to jQuery's proxy method, Class provides a
+[jQuery.Class.static.proxy proxy]
+function that returns a callback to a method that will always
+have
+<code>this</code> set to the class or instance of the class.</p>
+<p>The following example uses this.proxy to make sure
+<code>this.name</code> is available in <code>show</code>.</p>
+<pre><code>$.Class(&quot;Todo&quot;,{
+  init: function( name ) { 
+    this.name = name 
+  },
+  get: function() {
+    $.get(&quot;/stuff&quot;,this.proxy('show'))
+  },
+  show: function( txt ) {
+    alert(this.name+txt)
+  }
+})
+new Todo(&quot;Trash&quot;).get()
+</code></pre>
+<p>Callback is available as a static and prototype method.</p>
+<h2>Demo</h2>
+<p>To create a Class call:</p>
+<pre><code>$.Class( [NAME , STATIC,] PROTOTYPE ) -&gt; Class
+</code></pre>
+<div class='params'>
+  <div class='param'><label>NAME</label><code>{optional:String}</code>
+  <p>If provided, this sets the shortName and fullName of the 
+     class and adds it and any necessary namespaces to the 
+     window object.</p>
+  </div>
+  <div class='param'><label>STATIC</label><code>{optional:Object}</code>
+  <p>If provided, this creates static properties and methods
+  on the class.</p>
+  </div>
+  <div class='param'><label>PROTOTYPE</label><code>{Object}</code>
+  <p>Creates prototype methods on the class.</p>
+  </div>
+</div>
+<p>When a Class is created, the static [jQuery.Class.static.setup setup]
+and [jQuery.Class.static.init init]  methods are called.</p>
+<p>To create an instance of a Class, call:</p>
+<pre><code>new Class([args ... ]) -&gt; instance
+</code></pre>
+<p>The created instance will have all the
+prototype properties and methods defined by the PROTOTYPE object.</p>
+<p>When an instance is created, the prototype [jQuery.Class.prototype.setup setup]
+and [jQuery.Class.prototype.init init]  methods
+are called.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<div class='demo_wrapper' data-demo-src='jquery/class/class.html'></div>
+
+		</section>
+		
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"dest":"/Users/webmech/dev/docs","generators":["html"],"parent":"jquerymx","docConfigDest":"../jquerymx/documentjs.json","project":{},"name":"$.Class","type":"constructor","description":"<p>Easy inheritance in JavaScript.\nClass provides simulated inheritance in JavaScript. Use Class to bridge the gap between\njQuery's functional programming style and Object Oriented Programming. It\nis based off John Resig's [http://ejohn.org/blog/simple-javascript-inheritance/|Simple Class]\nInheritance library.  Besides prototypal inheritance, it includes a few important features:</p>\n<ul>\n<li>Static inheritance</li>\n<li>Introspection</li>\n<li>Namespaces</li>\n<li>Setup and initialization methods</li>\n<li>Easy callback function creation</li>\n</ul>\n<p>The [mvc.class Get Started with jQueryMX] has a good walkthrough of $.Class.</p>\n<h2>Static v. Prototype</h2>\n<p>Before learning about Class, it's important to\nunderstand the difference between\na class's <strong>static</strong> and <strong>prototype</strong> properties.</p>\n<pre><code>//STATIC\nMyClass.staticProperty  //shared property\n\n//PROTOTYPE\nmyclass = new MyClass()\nmyclass.prototypeMethod() //instance method\n</code></pre>\n<p>A static (or class) property is on the Class constructor\nfunction itself\nand can be thought of being shared by all instances of the\nClass. Prototype propertes are available only on instances of the Class.</p>\n<h2>A Basic Class</h2>\n<p>The following creates a Monster class with a\nname (for introspection), static, and prototype members.\nEvery time a monster instance is created, the static\ncount is incremented.</p>\n<pre><code class=\"language-js\">$.Class('Monster',\n/* @static *|\n{\n  count: 0\n},\n/* @prototype *|\n{\n  init: function( name ) {\n\n    // saves name on the monster instance\n    this.name = name;\n\n    // sets the health\n    this.health = 10;\n\n    // increments count\n    this.constructor.count++;\n  },\n  eat: function( smallChildren ){\n    this.health += smallChildren;\n  },\n  fight: function() {\n    this.health -= 2;\n  }\n});\n\nhydra = new Monster('hydra');\n\ndragon = new Monster('dragon');\n\nhydra.name        // -&gt; hydra\nMonster.count     // -&gt; 2\nMonster.shortName // -&gt; 'Monster'\n\nhydra.eat(2);     // health = 12\n\ndragon.fight();   // health = 8\n\n</code></pre>\n<p>Notice that the prototype <b>init</b> function is called when a new instance of Monster is created.</p>\n<h2>Inheritance</h2>\n<p>When a class is extended, all static and prototype properties are available on the new class.\nIf you overwrite a function, you can call the base class's function by calling\n<code>this._super</code>.  Lets create a SeaMonster class.  SeaMonsters are less\nefficient at eating small children, but more powerful fighters.</p>\n<pre><code>Monster(&quot;SeaMonster&quot;,{\n  eat: function( smallChildren ) {\n    this._super(smallChildren / 2);\n  },\n  fight: function() {\n    this.health -= 1;\n  }\n});\n\nlockNess = new SeaMonster('Lock Ness');\nlockNess.eat(4);   //health = 12\nlockNess.fight();  //health = 11\n</code></pre>\n<h3>Static property inheritance</h3>\n<p>You can also inherit static properties in the same way:</p>\n<pre><code>$.Class(&quot;First&quot;,\n{\n    staticMethod: function() { return 1;}\n},{})\n\nFirst(&quot;Second&quot;,{\n    staticMethod: function() { return this._super()+1;}\n},{})\n\nSecond.staticMethod() // -&gt; 2\n</code></pre>\n<h2>Namespaces</h2>\n<p>Namespaces are a good idea! We encourage you to namespace all of your code.\nIt makes it possible to drop your code into another app without problems.\nMaking a namespaced class is easy:</p>\n<pre><code>$.Class(&quot;MyNamespace.MyClass&quot;,{},{});\n\nnew MyNamespace.MyClass()\n</code></pre>\n<h2 id='introspection'>Introspection</h2>\n<p>Often, it's nice to create classes whose name helps determine functionality.  Ruby on\nRails's [http://api.rubyonrails.org/classes/ActiveRecord/Base.html|ActiveRecord] ORM class\nis a great example of this.  Unfortunately, JavaScript doesn't have a way of determining\nan object's name, so the developer must provide a name.  Class fixes this by taking a String name for the class.</p>\n<pre><code>$.Class(&quot;MyOrg.MyClass&quot;,{},{})\nMyOrg.MyClass.shortName //-&gt; 'MyClass'\nMyOrg.MyClass.fullName //-&gt;  'MyOrg.MyClass'\n</code></pre>\n<p>The fullName (with namespaces) and the shortName (without namespaces) are added to the Class's\nstatic properties.</p>\n<h2>Setup and initialization methods</h2>\n<p>\nClass provides static and prototype initialization functions.\nThese come in two flavors - setup and init.\nSetup is called before init and\ncan be used to 'normalize' init's arguments.\n</p>\n<div class='whisper'>PRO TIP: Typically, you don't need setup methods in your classes. Use Init instead.\nReserve setup methods for when you need to do complex pre-processing of your class before init is called.\n</div>\n<pre><code class=\"language-js\">$.Class(&quot;MyClass&quot;,\n{\n  setup: function() {} //static setup\n  init: function() {} //static constructor\n},\n{\n  setup: function() {} //prototype setup\n  init: function() {} //prototype constructor\n})\n</code></pre>\n<h3>Setup</h3>\n<p>Setup functions are called before init functions.  Static setup functions are passed\nthe base class followed by arguments passed to the extend function.\nPrototype static functions are passed the Class constructor\nfunction arguments.</p>\n<p>If a setup function returns an array, that array will be used as the arguments\nfor the following init method.  This provides setup functions the ability to normalize\narguments passed to the init constructors.  They are also excellent places\nto put setup code you want to almost always run.</p>\n<p>The following is similar to how [jQuery.Controller.prototype.setup]\nmakes sure init is always called with a jQuery element and merged options\neven if it is passed a raw\nHTMLElement and no second parameter.</p>\n<pre><code>$.Class(&quot;jQuery.Controller&quot;,{\n  ...\n},{\n  setup: function( el, options ) {\n    ...\n    return [$(el),\n            $.extend(true,\n               this.Class.defaults,\n               options || {} ) ]\n  }\n})\n</code></pre>\n<p>Typically, you won't need to make or overwrite setup functions.</p>\n<h3>Init</h3>\n<p>Init functions are called after setup functions.\nTypically, they receive the same arguments\nas their preceding setup function.  The Foo class's <code>init</code> method\ngets called in the following example:</p>\n<pre><code>$.Class(&quot;Foo&quot;, {\n  init: function( arg1, arg2, arg3 ) {\n    this.sum = arg1+arg2+arg3;\n  }\n})\nvar foo = new Foo(1,2,3);\nfoo.sum //-&gt; 6\n</code></pre>\n<h2>Proxies</h2>\n<p>Similar to jQuery's proxy method, Class provides a\n[jQuery.Class.static.proxy proxy]\nfunction that returns a callback to a method that will always\nhave\n<code>this</code> set to the class or instance of the class.</p>\n<p>The following example uses this.proxy to make sure\n<code>this.name</code> is available in <code>show</code>.</p>\n<pre><code>$.Class(&quot;Todo&quot;,{\n  init: function( name ) { \n    this.name = name \n  },\n  get: function() {\n    $.get(&quot;/stuff&quot;,this.proxy('show'))\n  },\n  show: function( txt ) {\n    alert(this.name+txt)\n  }\n})\nnew Todo(&quot;Trash&quot;).get()\n</code></pre>\n<p>Callback is available as a static and prototype method.</p>\n<h2>Demo</h2>\n<p>To create a Class call:</p>\n<pre><code>$.Class( [NAME , STATIC,] PROTOTYPE ) -&gt; Class\n</code></pre>\n<div class='params'>\n  <div class='param'><label>NAME</label><code>{optional:String}</code>\n  <p>If provided, this sets the shortName and fullName of the \n     class and adds it and any necessary namespaces to the \n     window object.</p>\n  </div>\n  <div class='param'><label>STATIC</label><code>{optional:Object}</code>\n  <p>If provided, this creates static properties and methods\n  on the class.</p>\n  </div>\n  <div class='param'><label>PROTOTYPE</label><code>{Object}</code>\n  <p>Creates prototype methods on the class.</p>\n  </div>\n</div>\n<p>When a Class is created, the static [jQuery.Class.static.setup setup]\nand [jQuery.Class.static.init init]  methods are called.</p>\n<p>To create an instance of a Class, call:</p>\n<pre><code>new Class([args ... ]) -&gt; instance\n</code></pre>\n<p>The created instance will have all the\nprototype properties and methods defined by the PROTOTYPE object.</p>\n<p>When an instance is created, the prototype [jQuery.Class.prototype.setup setup]\nand [jQuery.Class.prototype.init init]  methods\nare called.</p>\n","comment":"undefined@class jQuery.Class\n","plugin":"jquery/class","download":"dist/jquery/jquery.class.js","test":"jquery/class/qunit.html","src":"class/class.js"};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				src="./static/steal.production.js"
+		    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

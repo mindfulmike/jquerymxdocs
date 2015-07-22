@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>index  - $.Drop</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">index</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="index">
+				index
+			</a>
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jquerymx.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="specialevents.html" data-search="Special Events">
+				Special Events
+			</a>
+		</li>
+		
+		
+			<li class="search-container active">
+			<a class="sidebar-title" href="$.Drop.html" data-search="$.Drop">
+				$.Drop
+			</a>
+			
+	<ul>
+		
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="$.Drop.cache.html" data-search="$.Drop.cache">
+						cache
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="$.Drop.cancel.html" data-search="$.Drop.cancel">
+						cancel
+					</a>
+				</li>
+				
+			
+			
+		
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="$.Drop.compile.html" data-search="$.Drop.compile">
+						compile
+					</a>
+				</li>
+				
+			
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+
+
+		</li>
+		
+	
+</ul>
+
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>$.Drop</h1>
+	<ul class="tags">
+		<li>constructor</li>
+	</ul>
+	<span class="module">jquery/event/drop</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+    
+	
+		<li><a href="">source</a></li>
+	
+	
+		<li><a href="../jquerymx/http:/jmvcsite.heroku.com/pluginify?plugins[]=jquery/event/drop/drop.js">download</a></li>
+	
+	
+		<li><a href="../jquery/event/drag/qunit.html">tests</a></li>
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Provides drop events as a special event to jQuery.<br />
+By binding to a drop event, the your callback functions will be
+called during the corresponding phase of drag.</p>
+<h2>Drop Events</h2>
+All drop events are called with the native event, an instance of drop, and the drag.  Here are the available drop 
+events:
+<ul>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<pre><code>&lt;li&gt;&lt;code&gt;dropinit&lt;/code&gt; - the drag motion is started, drop positions are calculated.&lt;/li&gt;
+</code></pre>
+ <li><code>dropover</code> - a drag moves over a drop element, called once as the drop is dragged over the element.</li>
+ <li><code>dropout</code> - a drag moves out of the drop element.</li>
+ <li><code>dropmove</code> - a drag is moved over a drop element, called repeatedly as the element is moved.</li>
+ <li><code>dropon</code> - a drag is released over a drop element.</li>
+ <li><code>dropend</code> - the drag motion has completed.</li>
+</ul>
+<h2>Examples</h2>
+Here's how to listen for when a drag moves over a drop:
+<pre><code class="language-js">$('.drop').delegate(&quot;dropover&quot;, function(ev, drop, drag){
+  $(this).addClass(&quot;drop-over&quot;)
+})
+```A bit more complex example:
+&lt;div class='demo_wrapper' data-demo-src='jquery/event/drop/drop.html' data-demo-height='1000'&gt;&lt;/div&gt;
+
+
+## How it works
+
+  1. When you bind on a drop event, it adds that element to the list of rootElements.
+     RootElements might be drop points, or might have delegated drop points in them.
+
+  2. When a drag motion is started, each rootElement is queried for the events listening on it.
+     These events might be delegated events so we need to query for the drop elements.
+  
+  3. With each drop element, we add a Drop object with all the callbacks for that element.
+     Each element might have multiple event provided by different rootElements.  We merge
+     callbacks into the Drop object if there is an existing Drop object.
+     
+  4. Once Drop objects have been added to all elements, we go through them and call draginit
+     if available.
+     
+
+The constructor is never called directly.
+ 
+</code></pre>
+
+		</section>
+		
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"dest":"/Users/webmech/dev/docs","generators":["html"],"parent":"specialevents","docConfigDest":"../jquerymx/documentjs.json","project":{},"name":"$.Drop","type":"constructor","description":"<p>Provides drop events as a special event to jQuery.<br />\nBy binding to a drop event, the your callback functions will be\ncalled during the corresponding phase of drag.</p>\n<h2>Drop Events</h2>\nAll drop events are called with the native event, an instance of drop, and the drag.  Here are the available drop \nevents:\n<ul>\n","comment":"undefined@class jQuery.Drop\n","plugin":"jquery/event/drop","download":"http://jmvcsite.heroku.com/pluginify?plugins[]=jquery/event/drop/drop.js","test":"jquery/event/drag/qunit.html","src":"event/drop/drop.js"};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				src="./static/steal.production.js"
+		    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

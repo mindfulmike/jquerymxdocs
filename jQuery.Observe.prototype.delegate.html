@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.Observe.prototype.delegate</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jquerymx.lang.html" data-search="Language Helpers">
+				Language Helpers
+			</a>
+		</li>
+		
+		
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.Observe.html" data-search="jQuery.Observe">
+				jQuery.Observe
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Observe.List.html" data-search="jQuery.Observe.List">
+						List
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+					
+					<li class="heading search-container">
+						<span>prototype</span>
+						
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.attr.html" data-search="jQuery.Observe.prototype.attr">
+						attr
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.attrs.html" data-search="jQuery.Observe.prototype.attrs">
+						attrs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.bind.html" data-search="jQuery.Observe.prototype.bind">
+						bind
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active">
+					<a class="function" href="jQuery.Observe.prototype.delegate.html" data-search="jQuery.Observe.prototype.delegate">
+						delegate
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.each.html" data-search="jQuery.Observe.prototype.each">
+						each
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.removeAttr.html" data-search="jQuery.Observe.prototype.removeAttr">
+						removeAttr
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.serialize.html" data-search="jQuery.Observe.prototype.serialize">
+						serialize
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.unbind.html" data-search="jQuery.Observe.prototype.unbind">
+						unbind
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Observe.prototype.undelegate.html" data-search="jQuery.Observe.prototype.undelegate">
+						undelegate
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+					</li>
+					
+				
+				
+			
+			
+		
+	</ul>
+
+
+		</li>
+		
+	
+</ul>
+
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>delegate</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	<span class="module">jquery/lang/observe/delegate</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Listen for changes in a child attribute from the parent. The child attribute
+does not have to exist.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">observe.delegate(selector, event, cb)
+</h2>
+<div class="signature-wrapper">
+<p>Listen for changes in a child attribute from the parent. The child attribute
+does not have to exist.</p>
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>selector
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the attributes you want to listen for changes in.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>event
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the event name</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>cb
+				<code>{function()}</code></h4>
+			<div class="description">
+				<p>the callback handler</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+	<h3>Returns</h3>
+	<div class="returns">
+		<h4><code>{jQuery.Delegate}</code></h4>
+		<div class="description">
+			<p>the delegate for chaining</p>
+
+		</div>
+		
+		
+	</div>
+	
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<pre><code>// create an observable
+var observe = $.O({
+  foo : {
+    bar : &quot;Hello World&quot;
+  }
+})
+
+//listen to changes on a property
+observe.delegate(&quot;foo.bar&quot;,&quot;change&quot;, function(ev, prop, how, newVal, oldVal){
+  // foo.bar has been added, set, or removed
+  this //-&gt; 
+});
+
+// change the property
+observe.attr('foo.bar',&quot;Goodbye Cruel World&quot;)
+</code></pre>
+<h2>Types of events</h2>
+<p>Delegate lets you listen to add, set, remove, and change events on property.</p>
+<p><strong>add</strong></p>
+<p>An add event is fired when a new property has been added.</p>
+<pre><code>var o = new $.Observe({});
+o.delegate(&quot;name&quot;,&quot;add&quot;, function(ev, value){
+  // called once
+  $('#name').show()
+})
+o.attr('name',&quot;Justin&quot;)
+o.attr('name',&quot;Brian&quot;);
+</code></pre>
+<p>Listening to add events is useful for 'setup' functionality (in this case
+showing the <code>#name</code> element.</p>
+<p><strong>set</strong></p>
+<p>Set events are fired when a property takes on a new value.  set events are
+always fired after an add.</p>
+<pre><code>o.delegate(&quot;name&quot;,&quot;set&quot;, function(ev, value){
+  // called twice
+  $('#name').text(value)
+})
+o.attr('name',&quot;Justin&quot;)
+o.attr('name',&quot;Brian&quot;);
+</code></pre>
+<p><strong>remove</strong></p>
+<p>Remove events are fired after a property is removed.</p>
+<pre><code>o.delegate(&quot;name&quot;,&quot;remove&quot;, function(ev){
+  // called once
+  $('#name').text(value)
+})
+o.attr('name',&quot;Justin&quot;);
+o.removeAttr('name');
+</code></pre>
+<h2>Wildcards - matching multiple properties</h2>
+<p>Sometimes, you want to know when any property within some part
+of an observe has changed. Delegate lets you use wildcards to
+match any property name.  The following listens for any change
+on an attribute of the params attribute:</p>
+<pre><code>var o = $.Observe({
+  options : {
+    limit : 100,
+    offset: 0,
+    params : {
+      parentId: 5
+    }
+  }
+})
+o.delegate('options.*','change', function(){
+  alert('1');
+})
+o.delegate('options.**','change', function(){
+  alert('2');
+})
+
+// alerts 1
+// alerts 2
+o.attr('options.offset',100)
+
+// alerts 2
+o.attr('options.params.parentId',6);
+</code></pre>
+<p>Using a single wildcard (<code><em></code>) matches single level
+properties.  Using a double wildcard (<code></em>*</code>) matches
+any deep property.</p>
+<h2>Listening on multiple properties and values</h2>
+<p>Delegate lets you listen on multiple values at once, for example,</p>
+
+		</section>
+		
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.Observe.prototype.delegate","params":[{"types":[{"type":"String"}],"name":"selector","description":"the attributes you want to listen for changes in."},{"types":[{"type":"String"}],"name":"event","description":"the event name"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"name":"cb","description":"the callback handler"}],"parent":"jQuery.Observe.prototype","src":"lang/observe/delegate/delegate.js","line":131,"codeLine":238,"description":"Listen for changes in a child attribute from the parent. The child attribute\ndoes not have to exist.","plugin":"jquery/lang/observe/delegate","returns":{"types":[{"type":"jQuery.Delegate"}],"description":"the delegate for chaining"},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

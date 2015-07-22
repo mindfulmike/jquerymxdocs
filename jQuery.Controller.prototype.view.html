@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="jQuery.Controller.html" data-search="jQuery.Controller">
 				jQuery.Controller
@@ -104,6 +102,7 @@
 		
 			
 				
+					
 					<li class="heading search-container">
 						<span>prototype</span>
 						
@@ -212,7 +211,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.Controller.prototype.view.html" data-search="jQuery.Controller.prototype.view">
 						view
 					</a>
@@ -223,7 +222,9 @@
 		
 	</ul>
 
+
 					</li>
+					
 				
 				
 			
@@ -231,6 +232,7 @@
 		
 			
 				
+					
 					<li class="heading search-container">
 						<span>static</span>
 						
@@ -302,7 +304,9 @@
 		
 	</ul>
 
+
 					</li>
+					
 				
 				
 			
@@ -310,11 +314,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -450,25 +455,6 @@ this controller class's &quot;Helpers&quot; property will be used.</p>
 		
 
 		
-		<section class="comment">
-			<pre><code class="language-js">TasksController = $.Controller.extend('TasksController',{
-  click: function( el ) {
-    // renders with views/tasks/click.ejs
-    el.html( this.view() ) 
-    // renders with views/tasks/under.ejs
-    el.after( this.view(&quot;under&quot;, [1,2]) );
-    // renders with views/tasks/under.micro 
-    el.after( this.view(&quot;under.micro&quot;, [1,2]) );
-    // renders with views/shared/top.ejs
-    el.before( this.view(&quot;shared/top&quot;, {phrase: &quot;hi&quot;}) );
-  }
-})
-</code></pre>
-
-		</section>
-		
-		
-
 		
 
 		

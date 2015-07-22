@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="jQuery.View.html" data-search="jQuery.View">
 				jQuery.View
@@ -159,7 +157,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.View.register.html" data-search="jQuery.View.register">
 						register
 					</a>
@@ -280,11 +278,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -388,34 +387,16 @@ view helpers and compression.</p>
 		
 		<section class="comment">
 			<h2>Example</h2>
-<pre><code class="language-js">$.View.register({
-    suffix : &quot;tmpl&quot;,
- plugin : &quot;jquery/view/tmpl&quot;,
-    renderer: function( id, text ) {
-        return function(data){
-            return jQuery.render( text, data );
-        }
-    },
-    script: function( id, text ) {
-        var tmpl = $.tmpl(text).toString();
-        return &quot;function(data){return (&quot;+
-            tmpl+
-            &quot;).call(jQuery, jQuery, data); }&quot;;
-    }
-})
-```Here's what each property does:
-
-   * plugin - the location of the plugin
-   * suffix - files that use this suffix will be processed by this template engine
-   * renderer - returns a function that will render the template provided by text
-   * script - returns a string form of the processed template function.
-
-</code></pre>
+<p>Here's what each property does:</p>
+<ul>
+<li>plugin - the location of the plugin</li>
+<li>suffix - files that use this suffix will be processed by this template engine</li>
+<li>renderer - returns a function that will render the template provided by text</li>
+<li>script - returns a string form of the processed template function.</li>
+</ul>
 
 		</section>
 		
-		
-
 		
 
 		

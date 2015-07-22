@@ -63,7 +63,6 @@
 	
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
@@ -157,11 +156,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -355,178 +355,108 @@ then destroy tasks that the user is able to destroy:</p>
 <p>Model has a number of other useful features such as:</p>
 <ul>
   <li><p>Listening to [jquery.model.events events].</p>
-<pre><code class="language-js">// listen to name changes on a task
-task.bind(&quot;name&quot;, function(ev, newName){
-   alert('task name = '+newName);
+</li>
+<li><p><a href="jquery.model.typeconversion.html">Converting</a> raw data into more useful objects.</p>
+</li>
+<li><p>Methods and utilities on <a href="jQuery.Model.List.html">lists</a> of instances.</p>
+</li>
+<li><p><a href="http://api.jquery.com/category/deferred-object/">Deferreds</a></p>
+</li>
+</ul>
+<h2>$.View</h2>
+<p><a href="jQuery.View.html">$.View</a> is a template framework.  It allows
+you to use different template engines in the same way.</p>
+<p>The following requests tasks from the model, then
+loads a template at <code>&quot;task/views/tasks.ejs&quot;</code>,
+renders it with tasks, and
+inserts the result in the <code>#tasks</code> element.</p>
+<pre><code>Task.findAll( {}, function(tasks){
+  
+  $('#tasks').html( 'task/views/tasks.ejs', tasks );
 });
-
-//change the task's name
-task.attr('name', &quot;laundry&quot;);
-
-//listen for Tasks being created:
-Task.bind(&quot;created&quot;, function(ev, newTask){
-   // create newTask's html and add it to the page
-});
-```&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;<a href="jquery.model.typeconversion.html">Converting</a> raw data into more useful objects.&lt;/p&gt;
-
-```js
-$.Model('Task', {
-  convert  : {
-    'date' : function(raw){
-      return new Date(raw)
-    }
-  },
-  attributes : {
-    'createdAt' : 'date' 
-  }
-},{});
-
-var task = new Task({ createdAt : 1303087131164});
-
-// createdAt is now a date.
-task.createdAt.getFullYear() // -&gt; 2011
-```&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Methods and utilities on <a href="jQuery.Model.List.html">lists</a> of instances.&lt;/p&gt;
-
-```js
-// define a task list
-$.Model.List('Task.List',{
-
-  // add a helper method to a collection of tasks
-  canDestroyAll : function(){
-    
-    return this.grep(function(task){
-      return task.canDestroy();
-    }).length === this.length
+</code></pre>
+<p><code>tasks.ejs</code> might look like:</p>
+<pre><code>&lt;% $.each(this, function(task){  %&gt;
+  &lt;li&gt;&lt;%= task.name %&gt;&lt;/li&gt;
+&lt;% }) %&gt;
+</code></pre>
+<p>$.View understands <a href="http://api.jquery.com/category/deferred-object/">deferreds</a> so the following does the exact same thing!</p>
+<pre><code> $('#tasks').html( 'task/views/tasks.ejs', Task.findAll() );
+</code></pre>
+<p>Any template engine can be used with $.View.  JavaScriptMVC comes with:</p>
+<ul>
+<li>[jQuery.EJS]</li>
+<li><a href="Jaml.html">Jaml</a></li>
+<li><a href="Micro.html">Micro</a></li>
+<li><a href="jQuery.tmpl.html">jQuery.tmpl</a></li>
+</ul>
+<h2>$.Controller</h2>
+<p><a href="jQuery.Controller.html">$.Controller</a> is a jQuery widget factory. The
+following creates a <code>$.fn.list</code> <a href="jquery.controller.plugin.html">plugin</a> that writes
+a message into an element:</p>
+<pre><code>$.Controller( &quot;List&quot;, {
+  init: function( ) {
+    this.element.text( this.options.message );
   }
 });
 
-Task.findAll({}, function(tasks){
+// create the list
+$('#list').list({message: &quot;Hello World&quot;});
+</code></pre>
+<p>$.Controller lets you define <a href="jQuery.Controller.static.defaults.html">default options</a>:</p>
+<pre><code>$.Controller( &quot;List&quot;, {
+  defaults: {
+    message : &quot;I am list&quot;
+  }
+},{
+  init: function( ) {
+    this.element.text( this.options.message );
+  }
+});
 
-  //tasks is a Task.List
-  tasks.canDestroyAll() //-&gt; boolean
-})
-```&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;<a href="http://api.jquery.com/category/deferred-object/">Deferreds</a>&lt;/p&gt;
-
-```js
-// make 2 requests, and do something when they are 
-// both complete
-
-$.when( Task.findAll(), People.findAll() )
-  .done(function(tasks, people){
-
-  // do something cool!
-})
-```&lt;/li&gt;
-&lt;/ul&gt;
-    
-## $.View
-
-<a href="jQuery.View.html">$.View</a> is a template framework.  It allows 
-you to use different template engines in the same way.  
-
-The following requests tasks from the model, then
-loads a template at &lt;code&gt;&quot;task/views/tasks.ejs&quot;&lt;/code&gt;, 
-renders it with tasks, and 
-inserts the result in the &lt;code&gt;#tasks&lt;/code&gt; element.
-
-    Task.findAll( {}, function(tasks){
-      
-      $('#tasks').html( 'task/views/tasks.ejs', tasks );
-    });
-
-&lt;code&gt;tasks.ejs&lt;/code&gt; might look like:
-
-    &lt;% $.each(this, function(task){  %&gt;
-      &lt;li&gt;&lt;%= task.name %&gt;&lt;/li&gt;
-    &lt;% }) %&gt;
-
-$.View understands <a href="http://api.jquery.com/category/deferred-object/">deferreds</a> so the following does the exact same thing!
-
-     $('#tasks').html( 'task/views/tasks.ejs', Task.findAll() );
-
-Any template engine can be used with $.View.  JavaScriptMVC comes with:
-
-  - [jQuery.EJS]
-  - <a href="Jaml.html">Jaml</a>
-  - <a href="Micro.html">Micro</a>
-  - <a href="jQuery.tmpl.html">jQuery.tmpl</a>
-
-## $.Controller
-
-<a href="jQuery.Controller.html">$.Controller</a> is a jQuery widget factory. The 
-following creates a &lt;code&gt;$.fn.list&lt;/code&gt; <a href="jquery.controller.plugin.html">plugin</a> that writes 
-a message into an element:
-
-    $.Controller( &quot;List&quot;, {
-      init: function( ) {
-        this.element.text( this.options.message );
-      }
-    });
-
-    // create the list
-    $('#list').list({message: &quot;Hello World&quot;});
-
-$.Controller lets you define <a href="jQuery.Controller.static.defaults.html">default options</a>:
-
-    $.Controller( &quot;List&quot;, {
-      defaults: {
-        message : &quot;I am list&quot;
-      }
-    },{
-      init: function( ) {
-        this.element.text( this.options.message );
-      }
-    });
-
-    // create's a list that writes &quot;I am list&quot;
-    $('#list').list();
-
-Controller's best feature is that it organizes your event handlers, and 
-makes <a href="jquery.controller.listening.html">binding and unbinding</a> event 
+// create's a list that writes &quot;I am list&quot;
+$('#list').list();
+</code></pre>
+<p>Controller's best feature is that it organizes your event handlers, and
+makes <a href="jquery.controller.listening.html">binding and unbinding</a> event
 handlers extremely easy. The following listens for clicks on an
-&lt;code&gt;LI&lt;/codE&gt; elements and alerts the element's text:
+<code>LI</codE> elements and alerts the element's text:</p>
+<pre><code>$.Controller( &quot;TaskList&quot;, {
+  init: function(){
+    // uses a view to render tasks
+    this.element.html( &quot;tasks.ejs&quot;, Task.findAll() );
+  },
+  &quot;li click&quot;: function(el){
+    alert( el.text() );
+  }
+});
+</code></pre>
+<p>Controller makes it easy to parameterize event binding.  The following
+listens for tasks being created and inserts them into the list:</p>
+<pre><code>$.Controller( &quot;TaskList&quot;, {
+  init: function( ) {
+    // uses a view to render tasks
+    this.element.html(&quot;tasks.ejs&quot;, Task.findAll());
+  },
+  &quot;{Task} created&quot;: function( Task, ev, newTask ) {
+    this.element.append( &quot;tasks.ejs&quot;, [newTask] );
+  }
+});
+</code></pre>
+<p>Finally, this makes it very easy to create widgets that work with any model:</p>
+<pre><code>$.Controller( &quot;List&quot;, {
+  init: function(){
+    // uses a view to render tasks
+    this.element.html( this.options.view, 
+                       this.options.model.findAll( ));
+  },
+  &quot;{model} created&quot;: function( Model, ev, instance ){
+    this.element.append( this.options.view, [instance] );
+  }
+});
 
-    $.Controller( &quot;TaskList&quot;, {
-      init: function(){
-        // uses a view to render tasks
-        this.element.html( &quot;tasks.ejs&quot;, Task.findAll() );
-      },
-      &quot;li click&quot;: function(el){
-        alert( el.text() );
-      }
-    });
-
-Controller makes it easy to parameterize event binding.  The following 
-listens for tasks being created and inserts them into the list:
-
-    $.Controller( &quot;TaskList&quot;, {
-      init: function( ) {
-        // uses a view to render tasks
-        this.element.html(&quot;tasks.ejs&quot;, Task.findAll());
-      },
-      &quot;{Task} created&quot;: function( Task, ev, newTask ) {
-        this.element.append( &quot;tasks.ejs&quot;, [newTask] );
-      }
-    });
-
-Finally, this makes it very easy to create widgets that work with any model:
-
-    $.Controller( &quot;List&quot;, {
-      init: function(){
-        // uses a view to render tasks
-        this.element.html( this.options.view, 
-                           this.options.model.findAll( ));
-      },
-      &quot;{model} created&quot;: function( Model, ev, instance ){
-        this.element.append( this.options.view, [instance] );
-      }
-    });
-    
-    $(&quot;#tasks&quot;).list({ model: Task, view: 'tasks.ejs' });
-    $(&quot;#people&quot;).list({model: Person, view: 'people.ejs' });
+$(&quot;#tasks&quot;).list({ model: Task, view: 'tasks.ejs' });
+$(&quot;#people&quot;).list({model: Person, view: 'people.ejs' });
 </code></pre>
 
 		</section>
@@ -540,8 +470,6 @@ Finally, this makes it very easy to create widgets that work with any model:
 		
 
 		
-		
-
 		
 
 		
@@ -566,7 +494,7 @@ Finally, this makes it very easy to create widgets that work with any model:
 	
 	
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"jquerymx","src":"jquerymx.md","description":"jQuery Model View Controller and extensions. \njQueryMX is a collection of useful jQuery libraries that provide \nthe missing functionality necessary to \nimplement and organize large-scale jQuery applications. \n\nEvery part of jQueryMX can be used stand-alone which keeps your \napp super light.  $.Model, $.View, and $.Controller are only 7kb minified and gzipped.  This\nincluds their $.String, $.Class, and destroyed-event dependencies.\n\nIf you are using [steal], simply steal the plugin you need like:\n\n    steal('jquery/controller', function(){\n      $.Controller('Tabs');\n    })\n    \nOr, use the [http://javascriptmvc.com/builder.html download builder] to select \nthe files you need.\n\njQueryMX is divided into four core areas:\n\n  - DOM Helpers\n  - Language Helpers\n  - Special events\n  - Model, View, Controller and Class ( Read [mvc the walkthrough] )\n \nThe following highlights jQueryMX's functionality.\n\n## DOM Helpers\n\n[dom DOM helpers] extend jQuery with extra functionality for \nmanipulating the DOM. For example, [dimensions] lets you set the \nouter width and height of elements like:\n\n    $('#foo').outerWidth(500);\n    \nTHe following are the other dom plugins:\n\n  - [jQuery.cookie Cookie] - Set and get cookie values.\n  - [jQuery.fixture Fixture] - Simulate Ajax responses.\n  - [jQuery.fn.closest Closest] - Use the open child selector in event delegation.\n  - [jQuery.fn.compare Compare] - Compare the location of two elements rapidly.\n  - [jQuery.fn.curStyles CurStyles] - Get multiple css properties quickly.\n  - [jQuery.fn.formParams FormParams] - Serializes a form into a JSON-like object.\n  - [jQuery.fn.selection Selection] - Gets or sets the current text selection.\n  - [jQuery.fn.within Within] - Returns elements that have a point within their boundaries.\n  - [jQuery.Range Range] - Text range utilities.\n  - [jQuery.route] - Routes for history-enabled ajax apps.\n\n## Special Events\n\njQueryMX comes packed with jQuery [specialevents special events] and event helpers.\n\n  - [jQuery.Drag Drag] - Delegatable drag events.\n  - [jQuery.Drop Drop] - Delegatable drop events.\n  - [jQuery.Hover Hover] - Delegatable hover events.\n  - [jQuery.event.special.destroyed Destroyed] - Know when an element is removed from the page.\n  - [jQuery.event.special.resize Resize] - Listen to resize events on any element.\n  - [jQuery.event.swipe Swipe] - Delegatable swipe events.\n  - [jQuery.Event.prototype.key Key] - Get the character from a key event.\n  - [jQuery.event.special.default Default] - Provide default behaviors for events.\n  - [jquery.event.pause Pause-Resume] - Pause and resume event propagation.\n\n\n## Language Helpers\n\nLanguage helpers make it easy to perform various functions on\nJavaScript data.  \n\n  - [jQuery.Object Object] - compare objects and sets\n  - [jQuery.Observe Observe] - Listen to changes in JS Objects and Arrays\n  - [jQuery.String String] - String helpers\n  - [jQuery.toJSON toJSON] - create and convert JSON strings\n  - [jQuery.Vector Vector] - vector math\n\n## $.Class\n\n[jQuery.Class $.Class] provides simple prototypal \ninheritance.  It's used by [jQuery.Controller $.Controller] and \n[jQuery.Model $.Model].\n\n    // create a Monster Class\n\t$.Class(\"Monster\",\n\t// static methods \n\t{\n\t\n\t  // a list of all monsters\n\t  monsters : []\n\t},\n\t// prototype methods\n\t{\n\t\n\t  // called when a new monster is created\n\t  init : function(name){\n\t  \n\t    // stores a reference to the name\n\t    this.name = name;\n\t    \n\t    // adds this monster to the collection of monsters\n\t    this.Class.monsters.push(this);\n\t  },\n\t  \n\t  // a method on monsters\n\t  speak : function(){\n\t    alert(this.name + \" says hello.\");\n\t  }\n\t});\n\t\n\t// create a monster\n    var hydra = new Monster(\"hydra\");\t\n\n    // call a method on a monster\n\thydra.speak();\n\n## $.Model\n\n[jQuery.Model $.Model] encapsulates the service and data layer.  The following connects to a JSON REST service\nand adds a helper to let us know if we can destroy a task:\n\n    $.Model(\"Task\",{\n      findAll : \"GET /tasks.json\",\n      findOne : \"GET /tasks/{id}.json\",\n      create  : \"POST /tasks.json\",\n      update  : \"PUT /tasks/{id}.json\",\n      destroy : \"DELETE /tasks/{id}.json\"\n    },{\n      canDestroy : function(){\n        return this.acl.indexOf('w') > -1\n      }\n    });\n\nAssuming '/tasks.json' returns a JSON array like ...\n\n    [{\n      \"id\"       : 1,\n      \"name\"     : \"take out trash\",\n      \"acl\"      : \"rw\",\n      \"createdAt\": 1303000731164 // April 16 2011\n    },\n    {\n      \"id\"       : 2,\n      \"name\"     : \"do the dishes\",\n      \"acl\"      : \"r\" ,\n      \"createdAt\": 1303087131164 // April 17 2011\n    }]\n\n... the following will retrieve all tasks from the server and \nthen destroy tasks that the user is able to destroy:\n\n    Task.findAll({}, function(tasks){\n      for(var i =0; i < tasks.length; i++){\n       \n        var task = tasks[i];\n        \n        if( task.canDestroy() ){\n          task.destroy();\n        }\n      }\n    });\n\nModel has a number of other useful features such as:\n\n<ul>\n  <li><p>Listening to [jquery.model.events events].</p>\n\n```js\n// listen to name changes on a task\ntask.bind(\"name\", function(ev, newName){\n   alert('task name = '+newName);\n});\n\n//change the task's name\ntask.attr('name', \"laundry\");\n\n//listen for Tasks being created:\nTask.bind(\"created\", function(ev, newTask){\n   // create newTask's html and add it to the page\n});\n```</li>\n<li><p>[jquery.model.typeconversion Converting] raw data into more useful objects.</p>\n\n```js\n$.Model('Task', {\n  convert  : {\n    'date' : function(raw){\n      return new Date(raw)\n    }\n  },\n  attributes : {\n    'createdAt' : 'date' \n  }\n},{});\n\nvar task = new Task({ createdAt : 1303087131164});\n\n// createdAt is now a date.\ntask.createdAt.getFullYear() // -> 2011\n```</li>\n<li><p>Methods and utilities on [jQuery.Model.List lists] of instances.</p>\n\n```js\n// define a task list\n$.Model.List('Task.List',{\n\n  // add a helper method to a collection of tasks\n  canDestroyAll : function(){\n    \n    return this.grep(function(task){\n      return task.canDestroy();\n    }).length === this.length\n  }\n});\n\nTask.findAll({}, function(tasks){\n\n  //tasks is a Task.List\n  tasks.canDestroyAll() //-> boolean\n})\n```</li>\n<li><p>[http://api.jquery.com/category/deferred-object/ Deferreds]</p>\n\n```js\n// make 2 requests, and do something when they are \n// both complete\n\n$.when( Task.findAll(), People.findAll() )\n  .done(function(tasks, people){\n\n  // do something cool!\n})\n```</li>\n</ul>\n    \n## $.View\n\n[jQuery.View $.View] is a template framework.  It allows \nyou to use different template engines in the same way.  \n\nThe following requests tasks from the model, then\nloads a template at <code>\"task/views/tasks.ejs\"</code>, \nrenders it with tasks, and \ninserts the result in the <code>#tasks</code> element.\n\n    Task.findAll( {}, function(tasks){\n      \n      $('#tasks').html( 'task/views/tasks.ejs', tasks );\n    });\n\n<code>tasks.ejs</code> might look like:\n\n    <% $.each(this, function(task){  %>\n      <li><%= task.name %></li>\n    <% }) %>\n\n$.View understands [http://api.jquery.com/category/deferred-object/ deferreds] so the following does the exact same thing!\n\n     $('#tasks').html( 'task/views/tasks.ejs', Task.findAll() );\n\nAny template engine can be used with $.View.  JavaScriptMVC comes with:\n\n  - [jQuery.EJS]\n  - [Jaml]\n  - [Micro]\n  - [jQuery.tmpl]\n\n## $.Controller\n\n[jQuery.Controller $.Controller] is a jQuery widget factory. The \nfollowing creates a <code>$.fn.list</code> [jquery.controller.plugin plugin] that writes \na message into an element:\n\n    $.Controller( \"List\", {\n      init: function( ) {\n        this.element.text( this.options.message );\n      }\n    });\n\n\t// create the list\n\t$('#list').list({message: \"Hello World\"});\n\n$.Controller lets you define [jQuery.Controller.static.defaults default options]:\n\n    $.Controller( \"List\", {\n      defaults: {\n        message : \"I am list\"\n      }\n    },{\n      init: function( ) {\n        this.element.text( this.options.message );\n      }\n    });\n\n    // create's a list that writes \"I am list\"\n\t$('#list').list();\n\nController's best feature is that it organizes your event handlers, and \nmakes [jquery.controller.listening binding and unbinding] event \nhandlers extremely easy. The following listens for clicks on an\n<code>LI</codE> elements and alerts the element's text:\n\n    $.Controller( \"TaskList\", {\n      init: function(){\n        // uses a view to render tasks\n        this.element.html( \"tasks.ejs\", Task.findAll() );\n      },\n      \"li click\": function(el){\n        alert( el.text() );\n      }\n    });\n\nController makes it easy to parameterize event binding.  The following \nlistens for tasks being created and inserts them into the list:\n\n    $.Controller( \"TaskList\", {\n      init: function( ) {\n        // uses a view to render tasks\n        this.element.html(\"tasks.ejs\", Task.findAll());\n      },\n      \"{Task} created\": function( Task, ev, newTask ) {\n        this.element.append( \"tasks.ejs\", [newTask] );\n      }\n    });\n\nFinally, this makes it very easy to create widgets that work with any model:\n\n    $.Controller( \"List\", {\n      init: function(){\n        // uses a view to render tasks\n        this.element.html( this.options.view, \n                           this.options.model.findAll( ));\n      },\n      \"{model} created\": function( Model, ev, instance ){\n        this.element.append( this.options.view, [instance] );\n      }\n    });\n    \n    $(\"#tasks\").list({ model: Task, view: 'tasks.ejs' });\n    $(\"#people\").list({model: Person, view: 'people.ejs' });","title":"jQueryMX","parent":"index","order":0,"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"jquerymx","src":"jquerymx.md","description":"jQuery Model View Controller and extensions. \njQueryMX is a collection of useful jQuery libraries that provide \nthe missing functionality necessary to \nimplement and organize large-scale jQuery applications. \n\nEvery part of jQueryMX can be used stand-alone which keeps your \napp super light.  $.Model, $.View, and $.Controller are only 7kb minified and gzipped.  This\nincluds their $.String, $.Class, and destroyed-event dependencies.\n\nIf you are using [steal], simply steal the plugin you need like:\n\n    steal('jquery/controller', function(){\n      $.Controller('Tabs');\n    })\n    \nOr, use the [http://javascriptmvc.com/builder.html download builder] to select \nthe files you need.\n\njQueryMX is divided into four core areas:\n\n  - DOM Helpers\n  - Language Helpers\n  - Special events\n  - Model, View, Controller and Class ( Read [mvc the walkthrough] )\n \nThe following highlights jQueryMX's functionality.\n\n## DOM Helpers\n\n[dom DOM helpers] extend jQuery with extra functionality for \nmanipulating the DOM. For example, [dimensions] lets you set the \nouter width and height of elements like:\n\n    $('#foo').outerWidth(500);\n    \nTHe following are the other dom plugins:\n\n  - [jQuery.cookie Cookie] - Set and get cookie values.\n  - [jQuery.fixture Fixture] - Simulate Ajax responses.\n  - [jQuery.fn.closest Closest] - Use the open child selector in event delegation.\n  - [jQuery.fn.compare Compare] - Compare the location of two elements rapidly.\n  - [jQuery.fn.curStyles CurStyles] - Get multiple css properties quickly.\n  - [jQuery.fn.formParams FormParams] - Serializes a form into a JSON-like object.\n  - [jQuery.fn.selection Selection] - Gets or sets the current text selection.\n  - [jQuery.fn.within Within] - Returns elements that have a point within their boundaries.\n  - [jQuery.Range Range] - Text range utilities.\n  - [jQuery.route] - Routes for history-enabled ajax apps.\n\n## Special Events\n\njQueryMX comes packed with jQuery [specialevents special events] and event helpers.\n\n  - [jQuery.Drag Drag] - Delegatable drag events.\n  - [jQuery.Drop Drop] - Delegatable drop events.\n  - [jQuery.Hover Hover] - Delegatable hover events.\n  - [jQuery.event.special.destroyed Destroyed] - Know when an element is removed from the page.\n  - [jQuery.event.special.resize Resize] - Listen to resize events on any element.\n  - [jQuery.event.swipe Swipe] - Delegatable swipe events.\n  - [jQuery.Event.prototype.key Key] - Get the character from a key event.\n  - [jQuery.event.special.default Default] - Provide default behaviors for events.\n  - [jquery.event.pause Pause-Resume] - Pause and resume event propagation.\n\n\n## Language Helpers\n\nLanguage helpers make it easy to perform various functions on\nJavaScript data.  \n\n  - [jQuery.Object Object] - compare objects and sets\n  - [jQuery.Observe Observe] - Listen to changes in JS Objects and Arrays\n  - [jQuery.String String] - String helpers\n  - [jQuery.toJSON toJSON] - create and convert JSON strings\n  - [jQuery.Vector Vector] - vector math\n\n## $.Class\n\n[jQuery.Class $.Class] provides simple prototypal \ninheritance.  It's used by [jQuery.Controller $.Controller] and \n[jQuery.Model $.Model].\n\n    // create a Monster Class\n\t$.Class(\"Monster\",\n\t// static methods \n\t{\n\t\n\t  // a list of all monsters\n\t  monsters : []\n\t},\n\t// prototype methods\n\t{\n\t\n\t  // called when a new monster is created\n\t  init : function(name){\n\t  \n\t    // stores a reference to the name\n\t    this.name = name;\n\t    \n\t    // adds this monster to the collection of monsters\n\t    this.Class.monsters.push(this);\n\t  },\n\t  \n\t  // a method on monsters\n\t  speak : function(){\n\t    alert(this.name + \" says hello.\");\n\t  }\n\t});\n\t\n\t// create a monster\n    var hydra = new Monster(\"hydra\");\t\n\n    // call a method on a monster\n\thydra.speak();\n\n## $.Model\n\n[jQuery.Model $.Model] encapsulates the service and data layer.  The following connects to a JSON REST service\nand adds a helper to let us know if we can destroy a task:\n\n    $.Model(\"Task\",{\n      findAll : \"GET /tasks.json\",\n      findOne : \"GET /tasks/{id}.json\",\n      create  : \"POST /tasks.json\",\n      update  : \"PUT /tasks/{id}.json\",\n      destroy : \"DELETE /tasks/{id}.json\"\n    },{\n      canDestroy : function(){\n        return this.acl.indexOf('w') > -1\n      }\n    });\n\nAssuming '/tasks.json' returns a JSON array like ...\n\n    [{\n      \"id\"       : 1,\n      \"name\"     : \"take out trash\",\n      \"acl\"      : \"rw\",\n      \"createdAt\": 1303000731164 // April 16 2011\n    },\n    {\n      \"id\"       : 2,\n      \"name\"     : \"do the dishes\",\n      \"acl\"      : \"r\" ,\n      \"createdAt\": 1303087131164 // April 17 2011\n    }]\n\n... the following will retrieve all tasks from the server and \nthen destroy tasks that the user is able to destroy:\n\n    Task.findAll({}, function(tasks){\n      for(var i =0; i < tasks.length; i++){\n       \n        var task = tasks[i];\n        \n        if( task.canDestroy() ){\n          task.destroy();\n        }\n      }\n    });\n\nModel has a number of other useful features such as:\n\n<ul>\n  <li><p>Listening to [jquery.model.events events].</p>\n</li>\n<li><p>[jquery.model.typeconversion Converting] raw data into more useful objects.</p>\n</li>\n<li><p>Methods and utilities on [jQuery.Model.List lists] of instances.</p>\n</li>\n<li><p>[http://api.jquery.com/category/deferred-object/ Deferreds]</p>\n</li>\n</ul>\n    \n## $.View\n\n[jQuery.View $.View] is a template framework.  It allows \nyou to use different template engines in the same way.  \n\nThe following requests tasks from the model, then\nloads a template at <code>\"task/views/tasks.ejs\"</code>, \nrenders it with tasks, and \ninserts the result in the <code>#tasks</code> element.\n\n    Task.findAll( {}, function(tasks){\n      \n      $('#tasks').html( 'task/views/tasks.ejs', tasks );\n    });\n\n<code>tasks.ejs</code> might look like:\n\n    <% $.each(this, function(task){  %>\n      <li><%= task.name %></li>\n    <% }) %>\n\n$.View understands [http://api.jquery.com/category/deferred-object/ deferreds] so the following does the exact same thing!\n\n     $('#tasks').html( 'task/views/tasks.ejs', Task.findAll() );\n\nAny template engine can be used with $.View.  JavaScriptMVC comes with:\n\n  - [jQuery.EJS]\n  - [Jaml]\n  - [Micro]\n  - [jQuery.tmpl]\n\n## $.Controller\n\n[jQuery.Controller $.Controller] is a jQuery widget factory. The \nfollowing creates a <code>$.fn.list</code> [jquery.controller.plugin plugin] that writes \na message into an element:\n\n    $.Controller( \"List\", {\n      init: function( ) {\n        this.element.text( this.options.message );\n      }\n    });\n\n\t// create the list\n\t$('#list').list({message: \"Hello World\"});\n\n$.Controller lets you define [jQuery.Controller.static.defaults default options]:\n\n    $.Controller( \"List\", {\n      defaults: {\n        message : \"I am list\"\n      }\n    },{\n      init: function( ) {\n        this.element.text( this.options.message );\n      }\n    });\n\n    // create's a list that writes \"I am list\"\n\t$('#list').list();\n\nController's best feature is that it organizes your event handlers, and \nmakes [jquery.controller.listening binding and unbinding] event \nhandlers extremely easy. The following listens for clicks on an\n<code>LI</codE> elements and alerts the element's text:\n\n    $.Controller( \"TaskList\", {\n      init: function(){\n        // uses a view to render tasks\n        this.element.html( \"tasks.ejs\", Task.findAll() );\n      },\n      \"li click\": function(el){\n        alert( el.text() );\n      }\n    });\n\nController makes it easy to parameterize event binding.  The following \nlistens for tasks being created and inserts them into the list:\n\n    $.Controller( \"TaskList\", {\n      init: function( ) {\n        // uses a view to render tasks\n        this.element.html(\"tasks.ejs\", Task.findAll());\n      },\n      \"{Task} created\": function( Task, ev, newTask ) {\n        this.element.append( \"tasks.ejs\", [newTask] );\n      }\n    });\n\nFinally, this makes it very easy to create widgets that work with any model:\n\n    $.Controller( \"List\", {\n      init: function(){\n        // uses a view to render tasks\n        this.element.html( this.options.view, \n                           this.options.model.findAll( ));\n      },\n      \"{model} created\": function( Model, ev, instance ){\n        this.element.append( this.options.view, [instance] );\n      }\n    });\n    \n    $(\"#tasks\").list({ model: Task, view: 'tasks.ejs' });\n    $(\"#people\").list({model: Person, view: 'people.ejs' });","title":"jQueryMX","parent":"index","order":0,"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
 	</script>
 	
 	

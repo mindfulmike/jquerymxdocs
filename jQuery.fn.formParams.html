@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
 				DOM Helpers
@@ -165,7 +163,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.fn.formParams.html" data-search="jQuery.fn.formParams">
 						jQuery.fn.formParams
 					</a>
@@ -212,11 +210,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -344,24 +343,14 @@ to the result. Defaults to false.</p>
 		<section class="comment">
 			<p>When convert is set to true strings that represent numbers and booleans will
 be converted and empty string will not be added to the object.</p>
-<p>Example html:</p>
-<pre><code class="language-html">&lt;form&gt;
-  &lt;input name=&quot;foo[bar]&quot; value='2'/&gt;
-  &lt;input name=&quot;foo[ced]&quot; value='4'/&gt;
-&lt;form/&gt;
-```Example code:
-
-    $('form').formParams() //-&gt; { foo:{bar:'2', ced: '4'} }
-
-
-&lt;div class='demo_wrapper' data-demo-src='jquery/dom/form_params/form_params.html'&gt;&lt;/div&gt;
-
+<p>Example html:
+Example code:</p>
+<pre><code>$('form').formParams() //-&gt; { foo:{bar:'2', ced: '4'} }
 </code></pre>
+<div class='demo_wrapper' data-demo-src='jquery/dom/form_params/form_params.html'></div>
 
 		</section>
 		
-		
-
 		
 
 		

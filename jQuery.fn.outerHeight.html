@@ -66,18 +66,15 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		<li class="search-container active parent">
 			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
 				DOM Helpers
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="dimensions.html" data-search="dimensions">
 				dimensions
@@ -112,7 +109,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.fn.outerHeight.html" data-search="jQuery.fn.outerHeight">
 						jQuery.fn.outerHeight
 					</a>
@@ -135,11 +132,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -184,7 +182,8 @@
 		
 		<section class="description">
 			<p>Lets you set the outer height of an object where: <br/>
-<code>outerHeight = height + padding + border + (margin)</code>.</p>
+<code>outerHeight = height + padding + border + (margin)</code>.<br />
+When setting the outerHeight, it adjusts the height of the element.</p>
 
 		</section>
 		
@@ -199,7 +198,8 @@
 </h2>
 <div class="signature-wrapper">
 <p>Lets you set the outer height of an object where: <br/>
-<code>outerHeight = height + padding + border + (margin)</code>.</p>
+<code>outerHeight = height + padding + border + (margin)</code>.<br />
+When setting the outerHeight, it adjusts the height of the element.</p>
 
 
 	<h3>Parameters</h3>
@@ -261,18 +261,6 @@ Otherwise, returns outerHeight in pixels.</p>
 		
 
 		
-		<section class="comment">
-			<pre><code class="language-js">$(&quot;#foo&quot;).outerHeight(100); //sets outer height
-$(&quot;#foo&quot;).outerHeight(100, true); //uses margins
-$(&quot;#foo&quot;).outerHeight(); //returns outer height
-$(&quot;#foo&quot;).outerHeight(true); //returns outer height with margins
-```When setting the outerHeight, it adjusts the height of the element.
-</code></pre>
-
-		</section>
-		
-		
-
 		
 
 		
@@ -297,7 +285,7 @@ $(&quot;#foo&quot;).outerHeight(true); //returns outer height with margins
 	
 	
 	<script type="text/javascript">
-		var docObject = {"name":"jQuery.fn.outerHeight","type":"function","parent":"dimensions","src":"dom/dimensions/dimensions.js","line":69,"codeLine":88,"description":"Lets you set the outer height of an object where: <br/> \n<code>outerHeight = height + padding + border + (margin)</code>.","title":"","params":[{"types":[{"type":"Number"},{"type":"Boolean"}],"optional":true,"name":"height","description":"If a number is provided -> sets the outer height of the object.<br/>\nIf true is given ->  returns the outer height and includes margins.<br/>\nIf no value is given -> returns the outer height without margin."},{"types":[{"type":"Boolean"}],"optional":true,"name":"includeMargin","description":"Makes setting the outerHeight adjust for margin."}],"returns":{"types":[{"type":"jQuery"},{"type":"Number"}],"description":"If you are setting the value, returns the jQuery wrapped elements.\nOtherwise, returns outerHeight in pixels."},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+		var docObject = {"name":"jQuery.fn.outerHeight","type":"function","parent":"dimensions","src":"dom/dimensions/dimensions.js","line":69,"codeLine":88,"description":"Lets you set the outer height of an object where: <br/> \n<code>outerHeight = height + padding + border + (margin)</code>.  \nWhen setting the outerHeight, it adjusts the height of the element.","title":"","params":[{"types":[{"type":"Number"},{"type":"Boolean"}],"optional":true,"name":"height","description":"If a number is provided -> sets the outer height of the object.<br/>\nIf true is given ->  returns the outer height and includes margins.<br/>\nIf no value is given -> returns the outer height without margin."},{"types":[{"type":"Boolean"}],"optional":true,"name":"includeMargin","description":"Makes setting the outerHeight adjust for margin."}],"returns":{"types":[{"type":"jQuery"},{"type":"Number"}],"description":"If you are setting the value, returns the jQuery wrapped elements.\nOtherwise, returns outerHeight in pixels."},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
 	</script>
 	
 	

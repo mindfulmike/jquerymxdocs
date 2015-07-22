@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="jQuery.Model.html" data-search="jQuery.Model">
 				jQuery.Model
@@ -152,6 +150,7 @@
 		
 			
 				
+					
 					<li class="heading search-container">
 						<span>prototype</span>
 						
@@ -160,7 +159,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.Model.prototype.attr.html" data-search="jQuery.Model.prototype.attr">
 						attr
 					</a>
@@ -333,7 +332,9 @@
 		
 	</ul>
 
+
 					</li>
+					
 				
 				
 			
@@ -341,6 +342,7 @@
 		
 			
 				
+					
 					<li class="heading search-container">
 						<span>static</span>
 						
@@ -506,7 +508,9 @@
 		
 	</ul>
 
+
 					</li>
+					
 				
 				
 			
@@ -514,11 +518,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -654,52 +659,21 @@ The error function is called with validation errors.</p>
 
 		
 		<section class="comment">
-			<pre><code class="language-js">$.Model(&quot;Recipe&quot;)
-var recipe = new Recipe();
-recipe.attr(&quot;foo&quot;,&quot;bar&quot;)
-recipe.foo //-&gt; &quot;bar&quot;
-recipe.attr(&quot;foo&quot;) //-&gt; &quot;bar&quot;
-</code></pre>
-<h2>Setters</h2>
+			<h2>Setters</h2>
 <p>If you add a set<i>AttributeName</i> method on your model,
 it will be used to set the value.  The set method is called
 with the value and is expected to return the converted value.</p>
-<pre><code class="language-js">$.Model(&quot;Recipe&quot;,{
-  setCreatedAt : function(raw){
-    return Date.parse(raw)
-  }
-})
-var recipe = new Recipe();
-recipe.attr(&quot;createdAt&quot;,&quot;Dec 25, 1995&quot;)
-recipe.createAt //-&gt; Date
-</code></pre>
 <h2>Asynchronous Setters</h2>
 <p>Sometimes, you want to perform an ajax request when
 you set a property.  You can do this with setters too.</p>
 <p>To do this, your setter should return undefined and
 call success with the converted value.  For example:</p>
-<pre><code class="language-js">$.Model(&quot;Recipe&quot;,{
-  setTitle : function(title, success, error){
-    $.post(
-      &quot;recipe/update/&quot;+this.id+&quot;/title&quot;,
-      title,
-      function(){
-        success(title);
-      },
-      &quot;json&quot;)
-  }
-})
-
-recipe.attr(&quot;title&quot;,&quot;fish&quot;)
-</code></pre>
 <h2>Events</h2>
 <p>When you use attr, it can also trigger events.  This is
 covered in [$.Model.prototype.bind].</p>
 
 		</section>
 		
-		
-
 		
 
 		

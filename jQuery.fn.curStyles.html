@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
 				DOM Helpers
@@ -153,7 +151,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.fn.curStyles.html" data-search="jQuery.fn.curStyles">
 						jQuery.fn.curStyles
 					</a>
@@ -212,11 +210,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -266,6 +265,17 @@
 		<section class="description">
 			<p>Use curStyles to rapidly get a bunch of computed styles from an element.</p>
 <h3>Quick Example</h3>
+<h2>Use</h2>
+<p>An element's <b>computed</b> style is the current calculated style of the property.
+This is different than the values on <code>element.style</code> as
+<code>element.style</code> doesn't reflect styles provided by css or the browser's default
+css properties.</p>
+<p>Getting computed values individually is expensive! This plugin lets you get all
+the style properties you need all at once.</p>
+<h2>Demo</h2>
+<p>The following demo illustrates the performance improvement curStyle provides by providing
+a faster 'height' jQuery function called 'fastHeight'.</p>
+<div class='demo_wrapper' data-demo-src='jquery/dom/cur_styles/cur_styles.html'></div>
 
 		</section>
 		
@@ -281,6 +291,17 @@
 <div class="signature-wrapper">
 <p>Use curStyles to rapidly get a bunch of computed styles from an element.</p>
 <h3>Quick Example</h3>
+<h2>Use</h2>
+<p>An element's <b>computed</b> style is the current calculated style of the property.
+This is different than the values on <code>element.style</code> as
+<code>element.style</code> doesn't reflect styles provided by css or the browser's default
+css properties.</p>
+<p>Getting computed values individually is expensive! This plugin lets you get all
+the style properties you need all at once.</p>
+<h2>Demo</h2>
+<p>The following demo illustrates the performance improvement curStyle provides by providing
+a faster 'height' jQuery function called 'fastHeight'.</p>
+<div class='demo_wrapper' data-demo-src='jquery/dom/cur_styles/cur_styles.html'></div>
 
 
 	<h3>Parameters</h3>
@@ -325,28 +346,6 @@
 		
 
 		
-		<section class="comment">
-			<pre><code class="language-js">$(&quot;#foo&quot;).curStyles('float','display') //-&gt;
-// {
-//  cssFloat: &quot;left&quot;, display: &quot;block&quot;
-// }
-```&lt;h2&gt;Use&lt;/h2&gt;
-&lt;p&gt;An element's &lt;b&gt;computed&lt;/b&gt; style is the current calculated style of the property.
-This is different than the values on &lt;code&gt;element.style&lt;/code&gt; as
-&lt;code&gt;element.style&lt;/code&gt; doesn't reflect styles provided by css or the browser's default
-css properties.&lt;/p&gt;
-&lt;p&gt;Getting computed values individually is expensive! This plugin lets you get all
-the style properties you need all at once.&lt;/p&gt;
-&lt;h2&gt;Demo&lt;/h2&gt;
-&lt;p&gt;The following demo illustrates the performance improvement curStyle provides by providing
-a faster 'height' jQuery function called 'fastHeight'.&lt;/p&gt;
-&lt;div class='demo_wrapper' data-demo-src='jquery/dom/cur_styles/cur_styles.html'&gt;&lt;/div&gt;
-</code></pre>
-
-		</section>
-		
-		
-
 		
 
 		
@@ -371,7 +370,7 @@ a faster 'height' jQuery function called 'fastHeight'.&lt;/p&gt;
 	
 	
 	<script type="text/javascript">
-		var docObject = {"type":"function","name":"jQuery.fn.curStyles","params":[{"types":[{"type":"String"}],"name":"style","description":"pass style names as arguments"}],"parent":"dom","src":"dom/cur_styles/cur_styles.js","line":86,"codeLine":113,"description":"Use curStyles to rapidly get a bunch of computed styles from an element.\n<h3>Quick Example</h3>","plugin":"jquery/dom/cur_styles","download":"http://jmvcsite.heroku.com/pluginify?plugins[]=jquery/dom/cur_styles/cur_styles.js","test":"jquery/dom/cur_styles/qunit.html","returns":{"types":[{"type":"Object","options":[]}],"description":"an object of style:value pairs"},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+		var docObject = {"type":"function","name":"jQuery.fn.curStyles","params":[{"types":[{"type":"String"}],"name":"style","description":"pass style names as arguments"}],"parent":"dom","src":"dom/cur_styles/cur_styles.js","line":86,"codeLine":113,"description":"Use curStyles to rapidly get a bunch of computed styles from an element.\n<h3>Quick Example</h3>\n<h2>Use</h2>\n<p>An element's <b>computed</b> style is the current calculated style of the property.\nThis is different than the values on <code>element.style</code> as\n<code>element.style</code> doesn't reflect styles provided by css or the browser's default\ncss properties.</p>\n<p>Getting computed values individually is expensive! This plugin lets you get all\nthe style properties you need all at once.</p>\n<h2>Demo</h2>\n<p>The following demo illustrates the performance improvement curStyle provides by providing\na faster 'height' jQuery function called 'fastHeight'.</p>\n<div class='demo_wrapper' data-demo-src='jquery/dom/cur_styles/cur_styles.html'></div>","plugin":"jquery/dom/cur_styles","download":"http://jmvcsite.heroku.com/pluginify?plugins[]=jquery/dom/cur_styles/cur_styles.js","test":"jquery/dom/cur_styles/qunit.html","returns":{"types":[{"type":"Object","options":[]}],"description":"an object of style:value pairs"},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
 	</script>
 	
 	

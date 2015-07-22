@@ -66,11 +66,9 @@
 			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
 				jQueryMX
 			</a>
-			
 		</li>
 		
 		
-			
 			<li class="search-container active">
 			<a class="sidebar-title" href="jQuery.Class.html" data-search="jQuery.Class">
 				jQuery.Class
@@ -153,7 +151,7 @@
 			
 				
 				
-				<li class="search-container active ">
+				<li class="search-container active">
 					<a class="function" href="jQuery.Class.proxy.html" data-search="jQuery.Class.proxy">
 						proxy
 					</a>
@@ -188,11 +186,12 @@
 		
 	</ul>
 
+
 		</li>
-			
 		
 	
 </ul>
+
 	</nav>
 	
 	
@@ -305,55 +304,6 @@ next function.</p>
 		
 
 		
-		<section class="comment">
-			<pre><code class="language-js">$.Class(&quot;MyClass&quot;,{
-    getData: function() {
-        this.showing = null;
-        $.get(&quot;data.json&quot;,this.proxy('gotData'),'json')
-    },
-    gotData: function( data ) {
-        this.showing = data;
-    }
-},{});
-MyClass.showData();
-```&lt;h2&gt;Currying Arguments&lt;/h2&gt;
-Additional arguments to proxy will fill in arguments on the returning function.
-
-```js
-$.Class(&quot;MyClass&quot;,{
-   getData: function( &lt;b&gt;callback&lt;/b&gt; ) {
-     $.get(&quot;data.json&quot;,this.proxy('process',&lt;b&gt;callback&lt;/b&gt;),'json');
-   },
-   process: function( &lt;b&gt;callback&lt;/b&gt;, jsonData ) { //callback is added as first argument
-       jsonData.processed = true;
-       callback(jsonData);
-   }
-},{});
-MyClass.getData(showDataFunc)
-```&lt;h2&gt;Nesting Functions&lt;/h2&gt;
-Proxy can take an array of functions to call as 
-the first argument.  When the returned callback function
-is called each function in the array is passed the return value of the prior function.  This is often used
-to eliminate currying initial arguments.
-
-```js
-$.Class(&quot;MyClass&quot;,{
-   getData: function( callback ) {
-     //calls process, then callback with value from process
-     $.get(&quot;data.json&quot;,this.proxy(['process2',callback]),'json') 
-   },
-   process2: function( type,jsonData ) {
-       jsonData.processed = true;
-       return [jsonData];
-   }
-},{});
-MyClass.getData(showDataFunc);
-</code></pre>
-
-		</section>
-		
-		
-
 		
 
 		
