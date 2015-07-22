@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.Controller.static.processors.subscribe</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jQuery.Controller.html" data-search="jQuery.Controller">
+				jQuery.Controller
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jQuery.Controller.static.html" data-search="jQuery.Controller.static">
+				static
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.Controller.static.processors.html" data-search="jQuery.Controller.static.processors">
+				processors
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="function" href="jQuery.Controller.static.processors.subscribe.html" data-search="jQuery.Controller.static.processors.subscribe">
+						subscribe
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>subscribe</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	<span class="module">jquery/controller/subscribe</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Adds OpenAjax.Hub subscribing to controllers.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">processors.subscribe(el, event, selector, cb, controller)
+</h2>
+<div class="signature-wrapper">
+<p>Adds OpenAjax.Hub subscribing to controllers.</p>
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>el
+				<code>{HTMLElement}</code></h4>
+			<div class="description">
+				<p>the element being bound.  This isn't used.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>event
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the event type (subscribe).</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>selector
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the subscription name</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>cb
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the callback function's name</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>controller
+				<code>{*}</code></h4>
+			<div class="description">
+				
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<pre><code>$.Controller(&quot;Subscriber&quot;,{
+  &quot;recipe.updated subscribe&quot; : function(called, recipe){
+    
+  },
+  &quot;todo.* subscribe&quot; : function(called, todo){
+  
+  }
+})
+</code></pre>
+<p>You should typically be listening to jQuery triggered events when communicating between
+controllers.  Subscribe should be used for listening to model changes.</p>
+<h3>API</h3>
+<p>This is the call signiture for the processor, not the controller subscription callbacks.</p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.Controller.static.processors.subscribe","params":[{"types":[{"type":"HTMLElement"}],"name":"el","description":"the element being bound.  This isn't used."},{"types":[{"type":"String"}],"name":"event","description":"the event type (subscribe)."},{"types":[{"type":"String"}],"name":"selector","description":"the subscription name"},{"types":[{"type":"String"}],"name":"cb","description":"the callback function's name"},{"name":"controller","types":[{"type":"*"}]}],"parent":"jQuery.Controller.static.processors","src":"controller/subscribe/subscribe.js","line":3,"codeLine":30,"description":"Adds OpenAjax.Hub subscribing to controllers.","title":"","plugin":"jquery/controller/subscribe","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

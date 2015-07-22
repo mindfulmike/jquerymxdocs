@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX - Special Events </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="specialevents.html" data-search="Special Events">
+				Special Events
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drag.html" data-search="jQuery.Drag">
+						jQuery.Drag
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drop.html" data-search="jQuery.Drop">
+						jQuery.Drop
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Event.prototype.keyName.html" data-search="jQuery.Event.prototype.keyName">
+						jQuery.Event.prototype.keyName
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.event.swipe.html" data-search="jQuery.event.swipe">
+						jQuery.event.swipe
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="jquery.event.pause.html" data-search="Pause-Resume">
+						Pause-Resume
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="oldClean.html" data-search="oldClean">
+						oldClean
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="resize.html" data-search="resize">
+						resize
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Special Events</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">specialevents</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Special events like drag-drop.
+JavaScriptMVC provides a bunch of useful special events.  Find out more info on the left.  The following is a
+brief summary:</p>
+<h2>[jQuery.event.special.default Default Events]</h2>
+<p>Lets you supply default behavior for an event that is preventable
+with event.preventDefault().  This is extremely useful for providing DOM-like api's for your widgets.</p>
+<pre><code>$(&quot;#tabs&quot;).delegate(&quot;.panel&quot;,&quot;default.open&quot;, function(){
+  $(this).show()
+})
+</code></pre>
+<h2>[jQuery.event.special.destroyed Destroyed Events]</h2>
+<p>Know if an element has been removed from the page.</p>
+<pre><code>$(&quot;#contextMenu&quot;).bind(&quot;destroyed&quot;, function(){
+  // cleanup
+  $(document.body).unbind(&quot;click.contextMenu&quot;);
+})
+</code></pre>
+<h2><a href="jQuery.Drag.html">Drag</a> and <a href="jQuery.Drop.html">Drop</a> Events</h2>
+<p>Listen to drag-drop events with event delegation.</p>
+<pre><code>$(&quot;.item&quot;).live(&quot;dragover&quot;, function(ev, drag){
+  // let user know that the item can be dropped
+  $(this).addClass(&quot;canDrop&quot;);
+}).live(&quot;dropover&quot;, function(ev, drop, drag){
+  // let user know that the item can be dropped on
+  $(this).addClass('drop-able')
+})
+</code></pre>
+<h2></h2>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"src":"event/event.js","line":0,"codeLine":41,"type":"page","description":"Special events like drag-drop. \nJavaScriptMVC provides a bunch of useful special events.  Find out more info on the left.  The following is a \nbrief summary:\n\n## [jQuery.event.special.default Default Events]\n\nLets you supply default behavior for an event that is preventable \nwith event.preventDefault().  This is extremely useful for providing DOM-like api's for your widgets.\n\n    $(\"#tabs\").delegate(\".panel\",\"default.open\", function(){\n      $(this).show()\n    })\n    \n## [jQuery.event.special.destroyed Destroyed Events]\n\nKnow if an element has been removed from the page.\n\n    $(\"#contextMenu\").bind(\"destroyed\", function(){\n      // cleanup\n      $(document.body).unbind(\"click.contextMenu\");\n    })\n    \n## [jQuery.Drag Drag] and [jQuery.Drop Drop] Events\n\nListen to drag-drop events with event delegation.\n\n    $(\".item\").live(\"dragover\", function(ev, drag){\n      // let user know that the item can be dropped\n      $(this).addClass(\"canDrop\");\n    }).live(\"dropover\", function(ev, drop, drag){\n      // let user know that the item can be dropped on\n      $(this).addClass('drop-able')\n    })\n\n##","name":"specialevents","title":"Special Events","parent":"jquerymx","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

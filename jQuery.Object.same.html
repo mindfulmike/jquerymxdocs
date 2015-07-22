@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.Object.same</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jquerymx.lang.html" data-search="Language Helpers">
+				Language Helpers
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.Object.html" data-search="jQuery.Object">
+				jQuery.Object
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="function" href="jQuery.Object.same.html" data-search="jQuery.Object.same">
+						same
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Object.subset.html" data-search="jQuery.Object.subset">
+						subset
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Object.subsets.html" data-search="jQuery.Object.subsets">
+						subsets
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>same</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Returns if two objects are the same.  It takes an optional compares object that
+can be used to make comparisons.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">Object.same(a, b, compares, aParent, bParent, deep)
+</h2>
+<div class="signature-wrapper">
+<p>Returns if two objects are the same.  It takes an optional compares object that
+can be used to make comparisons.</p>
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>a
+				<code>{Object}</code></h4>
+			<div class="description">
+				<p>an object to compare</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>b
+				<code>{Object}</code></h4>
+			<div class="description">
+				<p>an object to compare</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>compares
+				<code>{Object}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>an object that indicates how to
+compare specific properties.
+Typically this is a name / value pair</p>
+<pre><code>$.Object.same({name: &quot;Justin&quot;},{name: &quot;JUSTIN&quot;},{name: &quot;i&quot;})
+</code></pre>
+<p>There are two compare functions that you can specify with a string:</p>
+<ul>
+<li>'i' - ignores case</li>
+<li>null - ignores this property</li>
+</ul>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>aParent
+				<code>{*}</code></h4>
+			<div class="description">
+				
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>bParent
+				<code>{*}</code></h4>
+			<div class="description">
+				
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>deep
+				<code>{Object}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>used internally</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<p>This function does not work with objects that create circular references.</p>
+<h2>Examples</h2>
+<pre><code>$.Object.same({name: &quot;Justin&quot;},
+              {name: &quot;JUSTIN&quot;}) //-&gt; false
+
+// ignore the name property
+$.Object.same({name: &quot;Brian&quot;},
+              {name: &quot;JUSTIN&quot;},
+              {name: null})      //-&gt; true
+
+// ignore case
+$.Object.same({name: &quot;Justin&quot;},
+              {name: &quot;JUSTIN&quot;},
+              {name: &quot;i&quot;})      //-&gt; true
+
+// deep rule
+$.Object.same({ person : { name: &quot;Justin&quot; } },
+              { person : { name: &quot;JUSTIN&quot; } },
+              { person : { name: &quot;i&quot;      } }) //-&gt; true
+              
+// supplied compare function
+$.Object.same({age: &quot;Thirty&quot;},
+              {age: 30},
+              {age: function( a, b ){
+                      if( a == &quot;Thirty&quot; ) { 
+                        a = 30
+                      }
+                      if( b == &quot;Thirty&quot; ) {
+                        b = 30
+                      }
+                      return a === b;
+                    }})      //-&gt; true
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.Object.same","params":[{"types":[{"type":"Object","options":[]}],"name":"a","description":"an object to compare"},{"types":[{"type":"Object","options":[]}],"name":"b","description":"an object to compare"},{"types":[{"type":"Object","options":[]}],"optional":true,"name":"compares","description":"an object that indicates how to \ncompare specific properties. \nTypically this is a name / value pair\n\n    $.Object.same({name: \"Justin\"},{name: \"JUSTIN\"},{name: \"i\"})\n    \nThere are two compare functions that you can specify with a string:\n\n  - 'i' - ignores case\n  - null - ignores this property"},{"name":"aParent","types":[{"type":"*"}]},{"name":"bParent","types":[{"type":"*"}]},{"types":[{"type":"Object","options":[]}],"optional":true,"name":"deep","description":"used internally"}],"parent":"jQuery.Object","src":"lang/object/object.js","line":54,"codeLine":109,"description":"Returns if two objects are the same.  It takes an optional compares object that\ncan be used to make comparisons.","title":"","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

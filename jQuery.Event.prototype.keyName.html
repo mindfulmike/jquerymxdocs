@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.Event.prototype.keyName</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="specialevents.html" data-search="Special Events">
+				Special Events
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drag.html" data-search="jQuery.Drag">
+						jQuery.Drag
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drop.html" data-search="jQuery.Drop">
+						jQuery.Drop
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="function" href="jQuery.Event.prototype.keyName.html" data-search="jQuery.Event.prototype.keyName">
+						jQuery.Event.prototype.keyName
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.event.swipe.html" data-search="jQuery.event.swipe">
+						jQuery.event.swipe
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="jquery.event.pause.html" data-search="Pause-Resume">
+						Pause-Resume
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="oldClean.html" data-search="oldClean">
+						oldClean
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="resize.html" data-search="resize">
+						resize
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>jQuery.Event.prototype.keyName</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	<span class="module">jquery/event/key</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Returns a string representation of the key pressed.  The following
+listens to and prevents backspaces being pressed in inputs:</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">specialevents.keyName()
+</h2>
+<div class="signature-wrapper">
+<p>Returns a string representation of the key pressed.  The following
+listens to and prevents backspaces being pressed in inputs:</p>
+
+
+
+	<h3>Returns</h3>
+	<div class="returns">
+		<h4><code>{String}</code></h4>
+		<div class="description">
+			<p>The string representation of of the key pressed.</p>
+
+		</div>
+		
+		
+	</div>
+	
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<pre><code>$(&quot;input&quot;).keypress(function(ev){
+  if(ev.keyName() == '\b') {
+   ev.preventDefault();
+  }
+});
+</code></pre>
+<h2>Keys</h2>
+<p>The following describes the key values returned by [jQuery.Event.prototype.key].</p>
+<ul>
+<li>\b - backspace</li>
+<li>\t - tab</li>
+<li>\r - enter key</li>
+<li>shift, ctrl, alt</li>
+<li>pause-break, caps, escape, num-lock, scroll-loc, print</li>
+<li>page-up, page-down, end, home, left, up, right, down, insert, delete</li>
+<li>' ' - space</li>
+<li>0-9 - number key pressed</li>
+<li>a-z - alpha key pressed</li>
+<li>num0-9 - number pad key pressed</li>
+<li>/ ; : = , - . / ` [ \ ] ' &quot;</li>
+<li>f1-12 - function keys pressed</li>
+</ul>
+<h2>Alternate keys</h2>
+<p>Use <a href="jQuery.event.key.html">jQuery.event.key</a> to set alternate key mappings for other locales.</p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.Event.prototype.keyName","params":[],"parent":"specialevents","src":"event/key/key.js","line":77,"codeLine":113,"description":"Returns a string representation of the key pressed.  The following\nlistens to and prevents backspaces being pressed in inputs:","plugin":"jquery/event/key","returns":{"types":[{"type":"String"}],"description":"The string representation of of the key pressed."},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

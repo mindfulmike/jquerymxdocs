@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.route</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
+				DOM Helpers
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.route.html" data-search="jQuery.route">
+				jQuery.route
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.current.html" data-search="jQuery.route.current">
+						current
+					</a>
+				</li>
+				
+			
+			
+		
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.deparam.html" data-search="jQuery.route.deparam">
+						deparam
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.link.html" data-search="jQuery.route.link">
+						link
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.param.html" data-search="jQuery.route.param">
+						param
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.ready.html" data-search="jQuery.route.ready">
+						ready
+					</a>
+				</li>
+				
+			
+			
+		
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.route.url.html" data-search="jQuery.route.url">
+						url
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>jQuery.route</h1>
+	<ul class="tags">
+		<li>constructor</li>
+	</ul>
+	<span class="module">jquery/dom/route</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">inherits: <a href="jQuery.Observe.html">jQuery.Observe</a></span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>jQuery.route helps manage browser history (and
+client state) by
+synchronizing the window.location.hash with
+an <a href="jQuery.Observe.html">jQuery.Observe</a>.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">new dom.route(url, defaults)
+</h2>
+<div class="signature-wrapper">
+<p>jQuery.route helps manage browser history (and
+client state) by
+synchronizing the window.location.hash with
+an <a href="jQuery.Observe.html">jQuery.Observe</a>.</p>
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>url
+				<code>{String}</code></h4>
+			<div class="description">
+				<p>the fragment identifier to match.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>defaults
+				<code>{Object}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>an object of default values</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+	<h3>Returns</h3>
+	<div class="returns">
+		<h4><code>{<a href="jQuery.route.html" >jQuery.route</a>}</code></h4>
+		<div class="description">
+			
+		</div>
+		
+		
+	</div>
+	
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<h2>Background Information</h2>
+<p>To support the browser's back button and bookmarking
+in an Ajax application, most applications use
+the <code>window.location.hash</code>.  By
+changing the hash (via a link or JavaScript),
+one is able to add to the browser's history
+without changing the page.  The [jQuery.event.special.hashchange event] allows
+you to listen to when the hash is changed.</p>
+<p>Combined, this provides the basics needed to
+create history enabled Ajax websites.  However,
+jQuery.Route addresses several other needs such as:</p>
+<ul>
+<li>Pretty Routes</li>
+<li>Keeping routes independent of application code</li>
+<li>Listening to specific parts of the history changing</li>
+<li>Setup / Teardown of widgets.</li>
+</ul>
+<h2>How it works</h2>
+<p><code>$.route</code> is a <a href="jQuery.Observe.html">$.Observe</a> that represents the
+<code>window.location.hash</code> as an
+object.  For example, if the hash looks like:</p>
+<pre><code>#!type=videos&amp;id=5
+</code></pre>
+<p>the data in <code>$.route</code> would look like:</p>
+<pre><code>{ type: 'videos', id: 5 }
+</code></pre>
+<p>$.route keeps the state of the hash in-sync with the data in
+$.route.</p>
+<h2>$.Observe</h2>
+<p>$.route is a <a href="jQuery.Observe.html">$.Observe</a>. Understanding
+$.Observe is essential for using $.route correctly.</p>
+<p>You can
+listen to changes in an Observe with bind and
+delegate and change $.route's properties with
+attr and attrs.</p>
+<h3>Listening to changes in an Observable</h3>
+<p>Listen to changes in history
+by <a href="jQuery.Observe.prototype.bind.html">bind</a>ing to
+changes in <code>$.route</code> like:</p>
+<pre><code>$.route.bind('change', function(ev, attr, how, newVal, oldVal) {
+
+})
+</code></pre>
+<ul>
+<li>attr - the name of the changed attribute</li>
+<li>how - the type of Observe change event (add, set or remove)</li>
+<li>newVal/oldVal - the new and old values of the attribute</li>
+</ul>
+<p>You can also listen to specific changes
+with <a href="jQuery.Observe.prototype.delegate.html">delegate</a>:</p>
+<pre><code>$.route.delegate('id','change', function(){ ... })
+</code></pre>
+<p>Observe lets you listen to the following events:</p>
+<ul>
+<li>change - any change to the object</li>
+<li>add - a property is added</li>
+<li>set - a property value is added or changed</li>
+<li>remove - a property is removed</li>
+</ul>
+<p>Listening for <code>add</code> is useful for widget setup
+behavior, <code>remove</code> is useful for teardown.</p>
+<h3>Updating an observable</h3>
+<p>Create changes in the route data like:</p>
+<pre><code>$.route.attr('type','images');
+</code></pre>
+<p>Or change multiple properties at once with
+<a href="jQuery.Observe.prototype.attrs.html">attrs</a>:</p>
+<pre><code>$.route.attr({type: 'pages', id: 5}, true)
+</code></pre>
+<p>When you make changes to $.route, they will automatically
+change the <code>hash</code>.</p>
+<h2>Creating a Route</h2>
+<p>Use <code>$.route(url, defaults)</code> to create a
+route. A route is a mapping from a url to
+an object (that is the $.route's state).</p>
+<p>If no routes are added, or no route is matched,
+$.route's data is updated with the <a href="jQuery.String.deparam.html">deparamed</a>
+hash.</p>
+<pre><code>location.hash = &quot;#!type=videos&quot;;
+// $.route -&gt; {type : &quot;videos&quot;}
+</code></pre>
+<p>Once routes are added and the hash changes,
+$.route looks for matching routes and uses them
+to update $.route's data.</p>
+<pre><code>$.route( &quot;content/:type&quot; );
+location.hash = &quot;#!content/images&quot;;
+// $.route -&gt; {type : &quot;images&quot;}
+</code></pre>
+<p>Default values can also be added:</p>
+<pre><code>$.route(&quot;content/:type&quot;,{type: &quot;videos&quot; });
+location.hash = &quot;#!content/&quot;
+// $.route -&gt; {type : &quot;videos&quot;}
+</code></pre>
+<h2>Delay setting $.route</h2>
+<p>By default, <code>$.route</code> sets its initial data
+on document ready.  Sometimes, you want to wait to set
+this data.  To wait, call:</p>
+<pre><code>$.route.ready(false);
+</code></pre>
+<p>and when ready, call:</p>
+<pre><code>$.route.ready(true);
+</code></pre>
+<h2>Changing the route.</h2>
+<p>Typically, you never want to set <code>location.hash</code>
+directly.  Instead, you can change properties on <code>$.route</code>
+like:</p>
+<pre><code>$.route.attr('type', 'videos')
+</code></pre>
+<p>This will automatically look up the appropriate
+route and update the hash.</p>
+<p>Often, you want to create links.  <code>$.route</code> provides
+the <a href="jQuery.route.link.html">jQuery.route.link</a> and <a href="jQuery.route.url.html">jQuery.route.url</a> helpers to make this
+easy:</p>
+<pre><code>$.route.link(&quot;Videos&quot;, {type: 'videos'})
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"constructor","name":"jQuery.route","params":[{"types":[{"type":"String"}],"name":"url","description":"the fragment identifier to match."},{"types":[{"type":"Object","options":[]}],"optional":true,"name":"defaults","description":"an object of default values"}],"parent":"dom","src":"dom/route/route.js","line":49,"codeLine":209,"description":"jQuery.route helps manage browser history (and\nclient state) by\nsynchronizing the window.location.hash with\nan [jQuery.Observe].","title":"","inherits":"jQuery.Observe","plugin":"jquery/dom/route","tags":["3.2"],"returns":{"types":[{"type":"jQuery.route"}],"description":""},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

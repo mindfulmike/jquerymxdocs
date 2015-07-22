@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.cookie</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
+				DOM Helpers
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="dimensions.html" data-search="dimensions">
+						dimensions
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Range.html" data-search="jQuery.Range">
+						jQuery.Range
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="function" href="jQuery.cookie.html" data-search="jQuery.cookie">
+						jQuery.cookie
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fixture.html" data-search="jQuery.fixture">
+						jQuery.fixture
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.closest.html" data-search="jQuery.fn.closest">
+						jQuery.fn.closest
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.compare.html" data-search="jQuery.fn.compare">
+						jQuery.fn.compare
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.curStyles.html" data-search="jQuery.fn.curStyles">
+						jQuery.fn.curStyles
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.formParams.html" data-search="jQuery.fn.formParams">
+						jQuery.fn.formParams
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.selection.html" data-search="jQuery.fn.selection">
+						jQuery.fn.selection
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fn.within.html" data-search="jQuery.fn.within">
+						jQuery.fn.within
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.route.html" data-search="jQuery.route">
+						jQuery.route
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>jQuery.cookie</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	<span class="module">jquery/dom/cookie</span>
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">dom.cookie(name, value, options, expires, path, domain, secure)
+</h2>
+<div class="signature-wrapper">
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>name
+				<code>{String}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>The name of the cookie.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>value
+				<code>{String}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>The value of the cookie.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>options
+				<code>{Object}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>An object literal containing key/value pairs to provide optional cookie attributes.<br /></p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>expires
+				<code>{Number | Date}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>Either an integer specifying the expiration date from now on in days or a Date object.
+If a negative value is specified (e.g. a date in the past), the cookie will be deleted.
+If set to null or omitted, the cookie will be a session cookie and will not be retained
+when the the browser exits.<br /></p>
+
+			</div>
+			
+			
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>path
+				<code>{String}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>The value of the path atribute of the cookie (default: path of page that created the cookie).<br /></p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>domain
+				<code>{String}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>The value of the domain attribute of the cookie (default: domain of page that created the cookie).<br /></p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>secure
+				<code>{Boolean}</code></h4>
+			<div class="description">
+				<p>If true, the secure attribute of the cookie will be set and the cookie transmission will
+require a secure protocol (like HTTPS).<br /></p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+	<h3>Returns</h3>
+	<div class="returns">
+		<h4><code>{String}</code></h4>
+		<div class="description">
+			<p>the value of the cookie or {undefined} when setting the cookie.</p>
+
+		</div>
+		
+		
+	</div>
+	
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<p>JavaScriptMVC's packaged cookie plugin is written by
+Klaus Hartl (stilbuero.de)<br />
+Dual licensed under the MIT and GPL licenses:<br />
+http://www.opensource.org/licenses/mit-license.php<br />
+http://www.gnu.org/licenses/gpl.html</p>
+ </p>
+ <p>
+ Create a cookie with the given name and value and other optional parameters.
+ / Get the value of a cookie with the given name.
+ </p>
+ <h3>Quick Examples</h3>
+<p>Set the value of a cookie.</p>
+<pre><code>$.cookie('the_cookie', 'the_value');
+</code></pre>
+<p>Create a cookie with all available options.</p>
+<pre><code class="language-js">$.cookie('the_cookie', 'the_value',
+{ expires: 7, path: '/', domain: 'jquery.com', secure: true });
+</code></pre>
+<p>Create a session cookie.</p>
+<pre><code class="language-js">$.cookie('the_cookie', 'the_value');
+</code></pre>
+<p>Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain
+used when the cookie was set.</p>
+<pre><code class="language-js">$.cookie('the_cookie', null);
+</code></pre>
+<p>Get the value of a cookie.</p>
+<pre><code class="language-js">$.cookie('the_cookie');
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.cookie","params":[{"types":[{"type":"String"}],"optional":true,"name":"name","description":"The name of the cookie."},{"types":[{"type":"String"}],"optional":true,"name":"value","description":"The value of the cookie."},{"types":[{"type":"Object","options":[]}],"optional":true,"name":"options","description":"An object literal containing key/value pairs to provide optional cookie attributes.<br />"},{"types":[{"type":"Number"},{"type":"Date"}],"optional":true,"name":"expires","description":"Either an integer specifying the expiration date from now on in days or a Date object.\n                            If a negative value is specified (e.g. a date in the past), the cookie will be deleted.\n                            If set to null or omitted, the cookie will be a session cookie and will not be retained\n                            when the the browser exits.<br />"},{"types":[{"type":"String"}],"optional":true,"name":"path","description":"The value of the path atribute of the cookie (default: path of page that created the cookie).<br />"},{"types":[{"type":"String"}],"optional":true,"name":"domain","description":"The value of the domain attribute of the cookie (default: domain of page that created the cookie).<br />"},{"types":[{"type":"Boolean"}],"name":"secure","description":"If true, the secure attribute of the cookie will be set and the cookie transmission will\n                       require a secure protocol (like HTTPS).<br />"}],"parent":"dom","src":"dom/cookie/cookie.js","line":2,"codeLine":60,"description":"","title":"","plugin":"jquery/dom/cookie","author":"Klaus Hartl/klaus.hartl@stilbuero.de","returns":{"types":[{"type":"String"}],"description":"the value of the cookie or {undefined} when setting the cookie."},"glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

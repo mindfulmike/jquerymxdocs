@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.Controller.static.processors</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jQuery.Controller.html" data-search="jQuery.Controller">
+				jQuery.Controller
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="jQuery.Controller.static.html" data-search="jQuery.Controller.static">
+				static
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.Controller.static.processors.html" data-search="jQuery.Controller.static.processors">
+				processors
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Controller.static.processors.subscribe.html" data-search="jQuery.Controller.static.processors.subscribe">
+						subscribe
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>processors</h1>
+	<ul class="tags">
+		<li>property</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>An object of {eventName : function} pairs that Controller uses to hook up events
+auto-magically.  A processor function looks like:</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<pre><code>jQuery.Controller.processors.
+  myprocessor = function( el, event, selector, cb, controller ) {
+     //el - the controller's element
+     //event - the event (myprocessor)
+     //selector - the left of the selector
+     //cb - the function to call
+     //controller - the binding controller
+  };
+</code></pre>
+<p>This would bind anything like: &quot;foo~3242 myprocessor&quot;.</p>
+<p>The processor must return a function that when called,
+unbinds the event handler.</p>
+<p>Controller already has processors for the following events:</p>
+<ul>
+<li>change</li>
+<li>click</li>
+<li>contextmenu</li>
+<li>dblclick</li>
+<li>focusin</li>
+<li>focusout</li>
+<li>keydown</li>
+<li>keyup</li>
+<li>keypress</li>
+<li>mousedown</li>
+<li>mouseenter</li>
+<li>mouseleave</li>
+<li>mousemove</li>
+<li>mouseout</li>
+<li>mouseover</li>
+<li>mouseup</li>
+<li>reset</li>
+<li>resize</li>
+<li>scroll</li>
+<li>select</li>
+<li>submit</li>
+</ul>
+<p>Listen to events on the document or window
+with templated event handlers:</p>
+<pre><code>$.Controller('Sized',{
+  &quot;{window} resize&quot; : function(){
+    this.element.width(this.element.parent().width() / 2);
+  }
+});
+
+$('.foo').sized();
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"name":"jQuery.Controller.static.processors","type":"property","parent":"jQuery.Controller.static","src":"controller/controller.js","line":476,"codeLine":531,"description":"An object of {eventName : function} pairs that Controller uses to hook up events\nauto-magically.  A processor function looks like:","attribute":"processors","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

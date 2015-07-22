@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - jQuery.fixture.rand</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="dom.html" data-search="DOM Helpers">
+				DOM Helpers
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jQuery.fixture.html" data-search="jQuery.fixture">
+				jQuery.fixture
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.fixture.make.html" data-search="jQuery.fixture.make">
+						make
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="function" href="jQuery.fixture.rand.html" data-search="jQuery.fixture.rand">
+						rand
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="jquery.fixture.0organizing.html" data-search="Organizing Fixtures">
+						Organizing Fixtures
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>rand</h1>
+	<ul class="tags">
+		<li>function</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Creates random integers or random arrays of
+other arrays.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+			<section class="signature">
+				<h2 id="sig_">fixture.rand(arr, min, max)
+</h2>
+<div class="signature-wrapper">
+<p>Creates random integers or random arrays of
+other arrays.</p>
+
+
+	<h3>Parameters</h3>
+
+	<ol class="parameters">
+		
+		<li class="parameter">
+			<h4>arr
+				<code>{Array | Number}</code></h4>
+			<div class="description">
+				<p>An array of items to select from.
+If a number is provided, a random number is returned.
+If min and max are not provided, a random number of items are selected
+from this array.</p>
+
+			</div>
+			
+			
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>min
+				<code>{Number}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>If only min is provided, min items
+are selected.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+		<li class="parameter">
+			<h4>max
+				<code>{Number}</code><span class="pull-right optional">Optional</span></h4>
+			<div class="description">
+				<p>If min and max are provided, a random number of
+items between min and max (inclusive) is selected.</p>
+
+			</div>
+			
+			
+			
+		</li>
+		
+	</ol>
+
+
+
+
+
+
+</div>
+
+			</section>
+		
+		
+
+		
+		<section class="comment">
+			<h2>Examples</h2>
+<pre><code>var rand = $.fixture.rand;
+
+// get a random integer between 0 and 10 (inclusive)
+rand(11);
+
+// get a random number between -5 and 5 (inclusive)
+rand(-5, 6);
+
+// pick a random item from an array
+rand([&quot;j&quot;,&quot;m&quot;,&quot;v&quot;,&quot;c&quot;],1)[0]
+
+// pick a random number of items from an array
+rand([&quot;j&quot;,&quot;m&quot;,&quot;v&quot;,&quot;c&quot;])
+
+// pick 2 items from an array
+rand([&quot;j&quot;,&quot;m&quot;,&quot;v&quot;,&quot;c&quot;],2)
+
+// pick between 2 and 3 items at random
+rand([&quot;j&quot;,&quot;m&quot;,&quot;v&quot;,&quot;c&quot;],2,3)
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"function","name":"jQuery.fixture.rand","params":[{"types":[{"type":"Array"},{"type":"Number"}],"name":"arr","description":"An array of items to select from.\nIf a number is provided, a random number is returned.\nIf min and max are not provided, a random number of items are selected\nfrom this array."},{"types":[{"type":"Number"}],"optional":true,"name":"min","description":"If only min is provided, min items \nare selected."},{"types":[{"type":"Number"}],"optional":true,"name":"max","description":"If min and max are provided, a random number of\nitems between min and max (inclusive) is selected."}],"parent":"jQuery.fixture","src":"dom/fixture/fixture.js","line":681,"codeLine":720,"description":"Creates random integers or random arrays of \nother arrays.","title":"","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

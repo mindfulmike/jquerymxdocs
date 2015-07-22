@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX  - oldClean</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="specialevents.html" data-search="Special Events">
+				Special Events
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drag.html" data-search="jQuery.Drag">
+						jQuery.Drag
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Drop.html" data-search="jQuery.Drop">
+						jQuery.Drop
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="jQuery.Event.prototype.keyName.html" data-search="jQuery.Event.prototype.keyName">
+						jQuery.Event.prototype.keyName
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.event.swipe.html" data-search="jQuery.event.swipe">
+						jQuery.event.swipe
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="jquery.event.pause.html" data-search="Pause-Resume">
+						Pause-Resume
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="property" href="oldClean.html" data-search="oldClean">
+						oldClean
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="resize.html" data-search="resize">
+						resize
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>oldClean</h1>
+	<ul class="tags">
+		<li>property</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+		<li><a href="../jquerymx/http:/jmvcsite.heroku.com/pluginify?plugins[]=jquery/dom/destroyed/destroyed.js">download</a></li>
+	
+	
+		<li><a href="../jquery/event/destroyed/qunit.html">tests</a></li>
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Provides a destroyed event on an element.</p>
+<p>
+The destroyed event is called when the element
+is removed as a result of jQuery DOM manipulators like remove, html,
+replaceWith, etc. Destroyed events do not bubble, so make sure you don't use live or delegate with destroyed
+events.
+</p>
+<h2>Quick Example</h2>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<pre><code class="language-js">$(&quot;.foo&quot;).bind(&quot;destroyed&quot;, function(){
+   //clean up code
+})
+```&lt;h2&gt;Quick Demo&lt;/h2&gt;
+&lt;div class='demo_wrapper' data-demo-src='jquery/event/destroyed/destroyed.html'&gt;&lt;/div&gt;
+&lt;h2&gt;More Involved Demo&lt;/h2&gt;
+&lt;div class='demo_wrapper' data-demo-src='jquery/event/destroyed/destroyed_menu.html'&gt;&lt;/div&gt;
+ 
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"name":"oldClean","type":"property","parent":"specialevents","src":"event/destroyed/destroyed.js","line":4,"codeLine":28,"description":"Provides a destroyed event on an element.\n<p>\nThe destroyed event is called when the element\nis removed as a result of jQuery DOM manipulators like remove, html,\nreplaceWith, etc. Destroyed events do not bubble, so make sure you don't use live or delegate with destroyed\nevents.\n</p>\n<h2>Quick Example</h2>","attribute":"destroyed","download":"http://jmvcsite.heroku.com/pluginify?plugins[]=jquery/dom/destroyed/destroyed.js","test":"jquery/event/destroyed/qunit.html","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

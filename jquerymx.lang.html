@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQueryMX - Language Helpers </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">jQueryMX</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="jQueryMX">
+				jQueryMX
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="jquerymx.lang.html" data-search="Language Helpers">
+				Language Helpers
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="creates.html" data-search="a new vector instance from the arguments.  Example:">
+						a new vector instance from the arguments.  Example:
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Object.html" data-search="jQuery.Object">
+						jQuery.Object
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.Observe.html" data-search="jQuery.Observe">
+						jQuery.Observe
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="constructor" href="jQuery.String.html" data-search="jQuery.String">
+						jQuery.String
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="jQuery.toJSON.html" data-search="jQuery.toJSON">
+						jQuery.toJSON
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Language Helpers</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">jquerymx.lang</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>A collection of language helpers for things like String, Objects, etc.
+JavaScriptMVC has several lightweight language helper plugins.</p>
+<h2><a href="jQuery.Object.html">Object</a></h2>
+<p>Methods useful for comparing Objects. For example, if two
+objects are the same:</p>
+<pre><code>$.Object.same({foo: &quot;bar&quot;}, {foo: &quot;bar&quot;});
+</code></pre>
+<h2><a href="jQuery.Observe.html">Observe</a></h2>
+<p>Makes an Object's properties observable:</p>
+<pre><code>var person = new $.Observe({ name: &quot;Justin&quot; })
+person.bind('change', function(){ ... })
+person.attr('name', &quot;Brian&quot;);
+</code></pre>
+<h2><a href="jQuery.String.html">String</a></h2>
+<p>String helpers capitalize, underscore, and perform similar manipulations
+on strings.  They can also lookup a value in an object:</p>
+<p>$.String.getObject(&quot;foo.bar&quot;,{foo: {bar: &quot;car&quot;}})</p>
+<h2><a href="jQuery.toJSON.html">toJSON</a></h2>
+<p>Used to create or consume JSON strings.</p>
+<h2>[jQuery.Vector Vector]</h2>
+<p>Used for vector math.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"src":"lang/string/string.js","line":0,"codeLine":37,"type":"page","description":"A collection of language helpers for things like String, Objects, etc. \nJavaScriptMVC has several lightweight language helper plugins.\n\n## [jQuery.Object Object]\n\nMethods useful for comparing Objects. For example, if two\nobjects are the same:\n\n    $.Object.same({foo: \"bar\"}, {foo: \"bar\"});\n    \n## [jQuery.Observe Observe]\n\nMakes an Object's properties observable:\n\n    var person = new $.Observe({ name: \"Justin\" })\n    person.bind('change', function(){ ... })\n    person.attr('name', \"Brian\");\n    \n## [jQuery.String String]\n\nString helpers capitalize, underscore, and perform similar manipulations\non strings.  They can also lookup a value in an object:\n\n   $.String.getObject(\"foo.bar\",{foo: {bar: \"car\"}})\n\n## [jQuery.toJSON toJSON]\n\nUsed to create or consume JSON strings.\n\n## [jQuery.Vector Vector]\n\nUsed for vector math.","name":"jquerymx.lang","title":"Language Helpers","parent":"jquerymx","glob":{"ignore":"{node_modules,bower_components}/**/*","pattern":"**/*.{md,js}","cwd":"/Users/webmech/dev/jquerymx"},"debug":true,"dest":"/Users/webmech/dev/docs","generators":["html"],"docConfigDest":"../jquerymx/documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>
